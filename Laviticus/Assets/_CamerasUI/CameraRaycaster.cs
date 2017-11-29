@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
-using System.Linq;
 using System.Collections.Generic;
+using System;
 
 namespace RPG.CameraUI
 {
@@ -9,6 +9,10 @@ namespace RPG.CameraUI
     {
         // INSPECTOR PROPERTIES RENDERED BY CUSTOM EDITOR SCRIPT
         [SerializeField] int[] layerPriorities;
+        [SerializeField] Texture2D walkCursor = null;
+        [SerializeField] Vector2 cursorHotspot = new Vector2(0, 0);
+
+        const int walkableLayerNumber = 8;
 
         float maxRaycastDepth = 100f; // Hard coded value
         int topPriorityLayerLastFrame = -1; // So get ? from start with Default layer terrain
@@ -24,15 +28,54 @@ namespace RPG.CameraUI
         public event OnClickPriorityLayerRight NotifyRightMouseClickObservers; // instantiate an observer set for right click
 
 
+        //REFACTOR CODE
+        public delegate void OnMouseOverTerrain(Vector3 destination);
+        public event OnMouseOverTerrain SendDestinationVector;
+
+        //public delegate void OnMouseOverEnemy(Enemy enemy);
+        //public event OnMouseOverEnemy SendEnemy;
+
         void Update()
         {
             // Check if pointer is over an interactable UI element
             if (EventSystem.current.IsPointerOverGameObject())
             {
-                NotifyObserersIfLayerChanged(5);
-                return; // Stop looking for other objects
-            }
+                //Implement UI interaction
 
+            }
+            else
+            {
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                //if (RaycastForEnemy(ray)) { return; }
+                if (RaycastForWalkable(ray)) { return; }
+                FarTooComplex(); //TODO Remove
+            }
+        }
+
+        private bool RaycastForEnemy(Ray ray)
+        {
+            throw new NotImplementedException();
+        }
+
+        private bool RaycastForWalkable(Ray ray)
+        {
+            RaycastHit hitInfo;
+            LayerMask walkableLayer = 1 << walkableLayerNumber;
+            bool walkableHit = Physics.Raycast(ray, out hitInfo, maxRaycastDepth, walkableLayer);
+
+            if (walkableHit)
+            {
+                Cursor.SetCursor(walkCursor, cursorHotspot, CursorMode.Auto);
+                SendDestinationVector(hitInfo.point);
+                return true;
+            }
+            return false;
+        }
+
+       
+
+        private void FarTooComplex()
+        {
             // Raycast to max depth, every frame as things can move under mouse
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit[] raycastHits = Physics.RaycastAll(ray, maxRaycastDepth);
@@ -53,14 +96,12 @@ namespace RPG.CameraUI
             {
                 NotifyLeftMouseClickObservers(priorityHit.Value, layerHit);
             }
-            
+
             // Notify delegates of highest priority game object under mouse when right button clicked
             if (Input.GetMouseButtonDown(1))
             {
                 NotifyRightMouseClickObservers(priorityHit.Value, layerHit);
             }
-
-
         }
 
         void NotifyObserersIfLayerChanged(int newLayer)

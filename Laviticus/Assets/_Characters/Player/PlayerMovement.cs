@@ -34,35 +34,40 @@ namespace RPG.Character
         void Start()
         {
 
-            if (Camera.main != null)
-            {
-                m_Cam = Camera.main.transform;
-            }
-            else
-            {
-                Debug.LogWarning(
-                    "Warning: no main camera found. Third person character needs a Camera tagged \"MainCamera\", for camera-relative controls.", gameObject);
-                // we use self-relative controls in this case, which probably isn't what the user wants, but hey, we warned them!
-            }
+            //if (Camera.main != null)
+            //{
+            //    m_Cam = Camera.main.transform;
+            //}
+            //else
+            //{
+            //    Debug.LogWarning(
+            //        "Warning: no main camera found. Third person character needs a Camera tagged \"MainCamera\", for camera-relative controls.", gameObject);
+            //    // we use self-relative controls in this case, which probably isn't what the user wants, but hey, we warned them!
+            //}
 
 
             cameraRaycaster = Camera.main.GetComponent<CameraRaycaster>();
             //playerObject = GetComponent<ThirdPersonCharacter>();
             aiCharControl = GetComponent<AICharacterControl>();
             cameraRaycaster.NotifyLeftMouseClickObservers += ProcessMouseClick;
+            cameraRaycaster.SendDestinationVector += SetDestinationVector;
             walkTarget = new GameObject("walkTarget");
         }
 
-
+        void SetDestinationVector(Vector3 destination)
+        {
+            if (Input.GetMouseButton(0))
+            {
+                walkTarget.transform.position = destination;
+                aiCharControl.SetTarget(walkTarget.transform);
+            }
+        }
 
         void ProcessMouseClick(RaycastHit raycastHit, int layerHit)
         {
             switch (layerHit)
             {
-                case walkableLayerNumber:
-                    walkTarget.transform.position = raycastHit.point;
-                    aiCharControl.SetTarget(walkTarget.transform);
-                    break;
+             
                 case enemyLayerNumber:
                     GameObject enemy = raycastHit.collider.gameObject;
                     aiCharControl.SetTarget(enemy.transform);
