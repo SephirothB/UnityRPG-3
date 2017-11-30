@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
 using UnityEngine.Assertions;
 
@@ -13,10 +11,6 @@ namespace RPG.Character
 {
     public class Player : MonoBehaviour, IDamagable
     {
-
-        [SerializeField] const int walkableLayerNumber = 8;
-        [SerializeField] const int enemyLayerNumber = 9;
-        [SerializeField] const int stiffLayerNumber = 10;
 
         [SerializeField] float maxHealthPoints = 100f;
         [SerializeField] float damageCaused = 10f;

@@ -28,7 +28,6 @@ namespace RPG.Character
         {
 
             cameraRaycaster = Camera.main.GetComponent<CameraRaycaster>();
-            //playerObject = GetComponent<ThirdPersonCharacter>();
             aiCharControl = GetComponent<AICharacterControl>();
             cameraRaycaster.SendDestinationVector += SetDestinationVector;
             cameraRaycaster.onMouseOverEnemy += OnMouseOverEnemy;
