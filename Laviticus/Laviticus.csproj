@@ -235,7 +235,6 @@
   <ItemGroup>
     <Compile Include="Assets\_CamerasUI\Camera_Follow.cs" />
     <Compile Include="Assets\_CamerasUI\CameraRaycaster.cs" />
-    <Compile Include="Assets\_CamerasUI\CursorAffordance.cs" />
     <Compile Include="Assets\_Characters\AICharacterControl.cs" />
     <Compile Include="Assets\_Characters\DominantHand.cs" />
     <Compile Include="Assets\_Characters\Enemy\Enemy.cs" />

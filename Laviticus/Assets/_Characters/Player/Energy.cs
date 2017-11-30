@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 //TODO Consider rewiring
 using RPG.CameraUI;
-
+using System;
 
 namespace RPG.Character
 {
@@ -51,45 +51,28 @@ namespace RPG.Character
         private void RegisterForRightMouseClick()
         {
             cameraRaycaster = FindObjectOfType<CameraRaycaster>();
-            cameraRaycaster.NotifyRightMouseClickObservers += OnRightMouseClick;
+            cameraRaycaster.onMouseOverEnemy += OnMouseOverEnemy;
         }
 
-        void OnRightMouseClick(RaycastHit raycastHit, int layerHit)
+        private void OnMouseOverEnemy(Enemy enemy)
         {
 
-            if (layerHit == enemyLayerNumber)
+            if (Input.GetMouseButtonDown(1))
             {
-
-                var enemy = raycastHit.collider.gameObject;
-                //currentTarget = enemy;
-
-                //if (IsEnemyInRange(enemy))
-                //{
-                EnergyAttackTarget(enemy);
+                EnergyAttackTarget(enemy.gameObject);
                 UpdateEnergyBar();
-                //}
-
-
-
             }
-
         }
+
+
 
         private void EnergyAttackTarget(GameObject target)
         {
 
-            //Component damagableComponent = target.gameObject.GetComponent(typeof(IDamagable));
-            var enemyComponent = target.GetComponent<Enemy>();
+            //var enemyComponent = target.GetComponent<Enemy>();
             float newEnergyPoints = currentEnergyPoints - energyPerHit;
 
             currentEnergyPoints = Mathf.Clamp(newEnergyPoints, 0, maxEnergyPoints);
-
-            //if (Time.time - lastHitTime)
-            //{
-            //    /animator.SetTrigger("Attack");
-            //    enemyComponent.TakeDamage(damageCaused);
-            //    lastHitTime = Time.time;
-            //}
 
         }
 

@@ -60,20 +60,29 @@ namespace RPG.Character
 
 
         }
+        void RegisterForMouseClick()
+        {
+            cameraRaycaster = FindObjectOfType<CameraRaycaster>();
+            cameraRaycaster.onMouseOverEnemy += OnMouseOverEnemy;
+        }
 
-        private void SetCurrentMaxHealth()
+        void OnMouseOverEnemy(Enemy enemy)
+        {
+            //currentTarget = enemy;
+            //var enemyHit = enemy.gameObject;
+
+            if (Input.GetMouseButtonDown(0) && IsEnemyInRange(enemy))
+            {
+                AttackTarget(enemy);
+            }
+        }
+
+        void SetCurrentMaxHealth()
         {
             currentHealthPoints = maxHealthPoints;
         }
 
-        private void SetupRuntimeAnimator()
-        {
-            animator = GetComponent<Animator>();
-            animator.runtimeAnimatorController = animOverrideController;
-            animOverrideController["Default attack"] = weaponInUse.GetAttackAnimClip(); //Remove Constant
-        }
-
-        private void RegisterWeaponInUse()
+        void RegisterWeaponInUse()
         {
 
             var weaponPrefab = weaponInUse.GetWeaponPrefab();
@@ -84,6 +93,15 @@ namespace RPG.Character
             weapon.transform.localRotation = weaponInUse.gripTransform.localRotation;
 
         }
+
+        void SetupRuntimeAnimator()
+        {
+            animator = GetComponent<Animator>();
+            animator.runtimeAnimatorController = animOverrideController;
+            animOverrideController["Default attack"] = weaponInUse.GetAttackAnimClip(); //Remove Constant
+        }
+
+       
 
         private GameObject RequestDominantHand()
         {
@@ -96,49 +114,23 @@ namespace RPG.Character
 
         }
 
-        private void RegisterForMouseClick()
-        {
-            cameraRaycaster = FindObjectOfType<CameraRaycaster>();
-            cameraRaycaster.NotifyLeftMouseClickObservers += OnLeftMouseClick;
-        }
+        
 
-        void OnLeftMouseClick(RaycastHit raycastHit, int layerHit)
-        {
 
-            if (layerHit == enemyLayerNumber)
-            {
-
-                var enemy = raycastHit.collider.gameObject;
-                currentTarget = enemy;
-
-                if (IsEnemyInRange(enemy))
-                {
-                    AttackTarget(enemy);
-                }
-
-                             
-                
-            }
-
-        }
-
-        private bool IsEnemyInRange(GameObject target)
+        private bool IsEnemyInRange(Enemy target)
         {
             float distanceToTarget = (target.transform.position - transform.position).magnitude;
             return distanceToTarget <= weaponInUse.GetMaxAttackRange();    
         }
 
 
-        private void AttackTarget(GameObject target)
+        private void AttackTarget(Enemy target)
         {
 
-            //Component damagableComponent = target.gameObject.GetComponent(typeof(IDamagable));
-            var enemyComponent = target.GetComponent<Enemy>();
-
-            if (Time.time - lastHitTime > weaponInUse.GetMinTimeBetweenHits())
+           if (Time.time - lastHitTime > weaponInUse.GetMinTimeBetweenHits())
             {
                 animator.SetTrigger("Attack");
-                enemyComponent.TakeDamage(damageCaused);
+                target.TakeDamage(damageCaused);
                 lastHitTime = Time.time;
             }
 
