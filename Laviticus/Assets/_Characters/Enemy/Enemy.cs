@@ -75,6 +75,8 @@ namespace RPG.Character
             animator.SetTrigger(DEATH_ANIM);
 
             yield return new WaitForSecondsRealtime(audio.clip.length);
+
+            Destroy(this);
             
         }
         private void ReduceHealth(float damage)

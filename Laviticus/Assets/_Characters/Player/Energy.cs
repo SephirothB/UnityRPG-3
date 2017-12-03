@@ -10,7 +10,7 @@ namespace RPG.Character
     {
         [SerializeField] const int walkableLayerNumber = 8;
         [SerializeField] float maxEnergyPoints = 100f;
-        [SerializeField] RawImage energyBarRawImage;
+        [SerializeField] Image energyImage;
         [SerializeField] float energyRegenPerSecond = 1f;
 
         Player player;
@@ -40,8 +40,7 @@ namespace RPG.Character
         }
         public void UpdateEnergyBar()
         {
-            float xValue = -(EnergyAsPercentage / 2f) - 0.5f;
-            energyBarRawImage.uvRect = new Rect(xValue, 0f, 0.5f, 1f);
+            energyImage.fillAmount = EnergyAsPercentage;
         }
 
         void RegenEnergy()
