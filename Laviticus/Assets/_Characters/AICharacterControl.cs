@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace UnityStandardAssets.Characters.ThirdPerson
+namespace RPG.Character
 {
     [RequireComponent(typeof (UnityEngine.AI.NavMeshAgent))]
     [RequireComponent(typeof (ThirdPersonCharacter))]
@@ -26,12 +26,20 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         private void Update()
         {
             if (target != null)
+            {
                 Agent.SetDestination(target.position);
-
+            }
             if (Agent.remainingDistance > Agent.stoppingDistance)
+            {
                 Character.Move(Agent.desiredVelocity, false, false);
+            }
             else
+            {
+
+                Agent.velocity = Vector3.zero;
                 Character.Move(Vector3.zero, false, false);
+
+            }
         }
 
 

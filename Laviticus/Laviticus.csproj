@@ -244,6 +244,15 @@
     <Compile Include="Assets\_Characters\Player\Player.cs" />
     <Compile Include="Assets\_Characters\Player\PlayerHealthBar.cs" />
     <Compile Include="Assets\_Characters\Player\PlayerMovement.cs" />
+    <Compile Include="Assets\_Characters\Player\Special Abilities\Nano Heal\NanoHealBehavior.cs" />
+    <Compile Include="Assets\_Characters\Player\Special Abilities\Nano Heal\NanoHealConfig.cs" />
+    <Compile Include="Assets\_Characters\Player\Special Abilities\Nano Shield\NanoShieldBehavior1.cs" />
+    <Compile Include="Assets\_Characters\Player\Special Abilities\Nano Shield\NanoShieldConfig1.cs" />
+    <Compile Include="Assets\_Characters\Player\Special Abilities\Power Attack\PowerAttackBehaviour.cs" />
+    <Compile Include="Assets\_Characters\Player\Special Abilities\Power Attack\PowerAttackConfig.cs" />
+    <Compile Include="Assets\_Characters\Player\Special Abilities\SpecialAbilityConfig.cs" />
+    <Compile Include="Assets\_Characters\Player\Special Abilities\Tesla Attack\TeslaAttackBehaviour.cs" />
+    <Compile Include="Assets\_Characters\Player\Special Abilities\Tesla Attack\TeslaAttackConfig.cs" />
     <Compile Include="Assets\_Characters\ThirdPersonCharacter.cs" />
     <Compile Include="Assets\_Core\AudioTrigger.cs" />
     <Compile Include="Assets\_Core\IDamagable.cs" />

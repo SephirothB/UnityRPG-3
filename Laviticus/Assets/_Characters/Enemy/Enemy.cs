@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityStandardAssets.Characters.ThirdPerson;
 
 using RPG.Weapons;
 using RPG.Core;
@@ -14,20 +13,29 @@ namespace RPG.Character
         [SerializeField] float maxHealthPoints = 100f;
         [SerializeField] float damagePerShot = 1f;
         [SerializeField] float attackRadius = 4f;
-        [SerializeField] float secondsBetweenAttack = 1f;
+        [SerializeField] float firingPeriodSeconds = 0.5f;
+        [SerializeField] float firingPeriodVariation = 0.1f;
         [SerializeField] float moveToAttackRadius = 6f;
         [SerializeField] GameObject projectileToUse;
         [SerializeField] GameObject projectileSocket;
-
         [SerializeField] Vector3 verticalAimOffset = new Vector3(0, 1f, 0);
+        [SerializeField] AudioClip[] damageSounds;
+        [SerializeField] AudioClip[] deathSounds;
         private float currentHealthPoints;
 
+        [SerializeField] AnimatorOverrideController animOverrideController;
+
+        AudioSource audio;
+        Animator animator;
         AICharacterControl aiCharacterControl = null;
-        GameObject player = null;
+        Player player = null;
         GameObject fireFrom;
 
+        const string DEATH_ANIM = "Death";
+        const string ATACK_ANIM = "Attack";
+        
         bool isAttacking = false;
-
+        
 
         public float HealthAsPercentage
         {
@@ -39,17 +47,50 @@ namespace RPG.Character
 
         public void TakeDamage(float damage)
         {
-            currentHealthPoints = Mathf.Clamp(currentHealthPoints - damage, 0f, maxHealthPoints);
-            if (currentHealthPoints <= 0) { Destroy(gameObject); }
+            bool enemyIsDead = (currentHealthPoints - damage <= 0);
+            ReduceHealth(damage);
+            if (enemyIsDead)
+            {
+
+
+                StartCoroutine(KillEnemy());
+                //Play death sound
+
+                //Trigger death animation
+
+                //Reload the scene
+
+                //TODO remove to allow death and implement reload funtionality //if (currentHealthPoints <= 0) { Destroy(gameObject); }
+            }
+
         }
 
+        IEnumerator KillEnemy()
+        {
+            print("Enemy Dead");
+
+            audio.clip = deathSounds[UnityEngine.Random.Range(0, deathSounds.Length)];
+            //TODO remove once ready audio.Play();
+
+            animator.SetTrigger(DEATH_ANIM);
+
+            yield return new WaitForSecondsRealtime(audio.clip.length);
+            
+        }
+        private void ReduceHealth(float damage)
+        {
+            currentHealthPoints = Mathf.Clamp(currentHealthPoints - damage, 0f, maxHealthPoints);
+            audio.clip = damageSounds[UnityEngine.Random.Range(0, damageSounds.Length)];
+            //TODO remove once ready audio.Play();
+        }
         // Use this for initialization
         void Start()
         {
 
-            player = GameObject.FindGameObjectWithTag("Player");
+            player = FindObjectOfType<Player>();
             aiCharacterControl = GetComponent<AICharacterControl>();
             currentHealthPoints = maxHealthPoints;
+            audio = GetComponent<AudioSource>();
             //fireFrom = FindGameObjectWithTag("ProjectileSpawnPoint");
 
 
@@ -59,6 +100,11 @@ namespace RPG.Character
         void Update()
         {
 
+            if (player.HealthAsPercentage <= Mathf.Epsilon)
+            {
+                StopAllCoroutines();
+                Destroy(this);
+            }
             float distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);
             if (distanceToPlayer <= moveToAttackRadius)
             {
@@ -71,10 +117,10 @@ namespace RPG.Character
             if (distanceToPlayer <= attackRadius && !isAttacking)
             {
                 isAttacking = true;
+                float randomisedDelay = Random.Range(firingPeriodSeconds - firingPeriodVariation, firingPeriodSeconds + firingPeriodVariation);
+                InvokeRepeating("FireProjectile", 0f, randomisedDelay); //TODO switch to coroutines
 
-                InvokeRepeating("FireProjectile", 0f, secondsBetweenAttack); //TODO switch to coroutines
-
-
+               
             }
             if (distanceToPlayer > attackRadius)
             {
