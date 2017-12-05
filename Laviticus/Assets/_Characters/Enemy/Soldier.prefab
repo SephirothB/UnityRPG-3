@@ -821,7 +821,7 @@ Animator:
   m_GameObject: {fileID: 1951625740647804}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 0400b2f0550683e408a431979d547479, type: 3}
-  m_Controller: {fileID: 9100000, guid: e2cf68ff4b1ffda45a77f7307dd789b9, type: 2}
+  m_Controller: {fileID: 22100000, guid: 2ec542ce84365c8478a29f2745f113cf, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -885,7 +885,8 @@ MonoBehaviour:
   maxHealthPoints: 150
   damagePerShot: 20
   attackRadius: 8.68
-  secondsBetweenAttack: 1
+  firingPeriodSeconds: 0.5
+  firingPeriodVariation: 0.1
   moveToAttackRadius: 6.5
   projectileToUse: {fileID: 1079810871987498, guid: 45e7324c1885e234295e78a510a7c41a,
     type: 2}

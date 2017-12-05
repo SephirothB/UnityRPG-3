@@ -18,12 +18,13 @@ namespace RPG.Character
         [SerializeField] float moveToAttackRadius = 6f;
         [SerializeField] GameObject projectileToUse;
         [SerializeField] GameObject projectileSocket;
+        [SerializeField] AnimatorOverrideController animOverrideController;
         [SerializeField] Vector3 verticalAimOffset = new Vector3(0, 1f, 0);
         [SerializeField] AudioClip[] damageSounds;
         [SerializeField] AudioClip[] deathSounds;
         private float currentHealthPoints;
 
-        [SerializeField] AnimatorOverrideController animOverrideController;
+        
 
         AudioSource audio;
         Animator animator;

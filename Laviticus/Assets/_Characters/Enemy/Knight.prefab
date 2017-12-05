@@ -87,22 +87,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1224158936146502
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4185006005976628}
-  - component: {fileID: 114937687403928168}
-  m_Layer: 0
-  m_Name: AudioTrigger
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1256982767901976
 GameObject:
   m_ObjectHideFlags: 1
@@ -143,6 +127,22 @@ GameObject:
   - component: {fileID: 4161264419247570}
   m_Layer: 0
   m_Name: Hips
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1453954910962472
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4968890767236392}
+  - component: {fileID: 114633229184257716}
+  m_Layer: 0
+  m_Name: AudioTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -441,19 +441,6 @@ Transform:
   m_Father: {fileID: 4083006117153324}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4185006005976628
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1224158936146502}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4848634867572364}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4212086068980026
 Transform:
   m_ObjectHideFlags: 1
@@ -627,13 +614,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1951625740647804}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.726578, y: 0, z: 0.5133209}
+  m_LocalRotation: {x: -0, y: 0.9966496, z: -0, w: 0.081789516}
+  m_LocalPosition: {x: 2.2056122, y: 0, z: -4.320038}
   m_LocalScale: {x: 1.5999998, y: 1.6, z: 1.5999998}
   m_Children:
   - {fileID: 4946170848927454}
   - {fileID: 4805821775435050}
-  - {fileID: 4185006005976628}
+  - {fileID: 4968890767236392}
   - {fileID: 4870910856930120}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -733,6 +720,19 @@ Transform:
   m_Father: {fileID: 4848634867572364}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4968890767236392
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1453954910962472}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4848634867572364}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4978451908815510
 Transform:
   m_ObjectHideFlags: 1
@@ -820,6 +820,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+--- !u!114 &114633229184257716
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1453954910962472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc2198fca01f11d4b9dcd863cc543d24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: ac102acb377e5fc41ad3a14b87d5fefe, type: 3}
+  layerFilter: 11
+  triggerRadius: 5
+  isOneTimeOnly: 1
+  hasPlayed: 0
 --- !u!114 &114780737030327466
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -834,28 +850,16 @@ MonoBehaviour:
   maxHealthPoints: 800
   damagePerShot: 100
   attackRadius: 2
-  secondsBetweenAttack: 2
+  firingPeriodSeconds: 0.5
+  firingPeriodVariation: 0.1
   moveToAttackRadius: 3
   projectileToUse: {fileID: 1079810871987498, guid: 45e7324c1885e234295e78a510a7c41a,
     type: 2}
   projectileSocket: {fileID: 1061618356191688}
   verticalAimOffset: {x: 0, y: 1, z: 0}
---- !u!114 &114937687403928168
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1224158936146502}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc2198fca01f11d4b9dcd863cc543d24, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: ac102acb377e5fc41ad3a14b87d5fefe, type: 3}
-  layerFilter: 11
-  triggerRadius: 5
-  isOneTimeOnly: 1
-  hasPlayed: 0
+  damageSounds: []
+  deathSounds: []
+  animOverrideController: {fileID: 0}
 --- !u!114 &114966148225715542
 MonoBehaviour:
   m_ObjectHideFlags: 1
