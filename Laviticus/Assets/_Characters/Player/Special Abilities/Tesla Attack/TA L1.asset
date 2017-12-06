@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Name: TA L1
   m_EditorClassIdentifier: 
   energyCost: 10
+  particlePrefab: {fileID: 1157982844991056, guid: eed9d3258aa4d3147b0a93461090f3e3,
+    type: 2}
   attackRadius: 3.14
   damageToEachTarget: 1

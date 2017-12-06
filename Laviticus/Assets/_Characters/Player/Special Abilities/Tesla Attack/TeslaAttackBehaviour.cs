@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using RPG.Core;
+using System;
 
 namespace RPG.Character
 {
-    public class TeslaAttackBehaviour : MonoBehaviour, SpecialAbility.ISpecialAbility
+    public class TeslaAttackBehaviour : MonoBehaviour, ISpecialAbility
     {
         TeslaAttackConfig config;
+              
 
         int layerMask = 1 << 8;
 
@@ -19,13 +21,30 @@ namespace RPG.Character
 
         public void Engage(AbilityUseParams useParams)
         {
+            DealSpecialAttack(useParams);
+            PlayParticleEffect();
+
+        }
+
+        private void PlayParticleEffect()
+        {
+           
+            GameObject newParticlePrefab = Instantiate(config.GetParticlePrefab(), transform.position, Quaternion.identity);
+            ParticleSystem newParticle = newParticlePrefab.GetComponent<ParticleSystem>();
+            newParticle.Play();
+            Destroy(newParticlePrefab, newParticle.main.duration);
+            
+        }
+
+        private void DealSpecialAttack(AbilityUseParams useParams)
+        {
             RaycastHit[] hits = Physics.SphereCastAll(
-                transform.position, 
-                config.GetRadius(), 
-                Vector3.up, 
+                transform.position,
+                config.GetRadius(),
+                Vector3.up,
                 config.GetRadius()
                 );
-            
+
 
             foreach (RaycastHit hit in hits)
             {
@@ -37,8 +56,6 @@ namespace RPG.Character
                     damageable.TakeDamage(damagetoDeal);
                 }
             }
-           
         }
-
     }
 }

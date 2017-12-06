@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -43,7 +43,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 1007
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -394,7 +394,7 @@ MonoBehaviour:
     height: 619
   m_MaximizeOnPlay: 0
   m_Gizmos: 1
-  m_Stats: 1
+  m_Stats: 0
   m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_TargetDisplay: 0
   m_ZoomArea:
@@ -474,9 +474,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.567831, y: -4.875866, z: 44.87552}
+    m_Target: {x: 11.88125, y: -6.578823, z: 38.703064}
     speed: 2
-    m_Value: {x: -1.567831, y: -4.875866, z: 44.87552}
+    m_Value: {x: 11.88125, y: -6.578823, z: 38.703064}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -499,9 +499,9 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.06458324, y: -0.07477427, z: 0.0048532546, w: 0.99509513}
+    m_Target: {x: -0.06922402, y: 0.029925324, z: -0.0020778216, w: -0.99715}
     speed: 2
-    m_Value: {x: 0.06458324, y: -0.07477427, z: 0.0048532546, w: 0.99509513}
+    m_Value: {x: -0.06922403, y: 0.029925326, z: -0.0020778219, w: -0.99715006}
   m_Size:
     m_Target: 146.16472
     speed: 2
@@ -555,19 +555,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Asset Packs - For Students/PolygonStudentSample - Synty/Materials
+    - Assets/_Characters/Player/Special Abilities/Tesla Attack
   m_ViewMode: 1
   m_StartGridSize: 81
   m_LastFolders:
-  - Assets/Asset Packs - For Students/PolygonStudentSample - Synty/Materials
+  - Assets/_Characters/Player/Special Abilities/Tesla Attack
   m_LastFoldersGridSize: 81
   m_LastProjectPath: D:\Development\Unity\RPG\UnityRPG\Laviticus
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 109}
-    m_SelectedIDs: d4480000
-    m_LastClickedID: 18644
-    m_ExpandedIDs: 00000000c4290000362a0000b62c0000c23400003c350000a63a0000b441000044450000e64600000e66000010660000126600001466000016660000186600001a6600001c6600001e66000020660000226600002466000026660000286600002a6600002c6600002e660000ffffff7f
+    scrollPos: {x: 0, y: 133.11946}
+    m_SelectedIDs: 72480000
+    m_LastClickedID: 18546
+    m_ExpandedIDs: 00000000c4290000362a0000b62c0000c23400003c35000070390000a63a0000b441000044450000e6460000ec660000ee660000f0660000f2660000f4660000f6660000f8660000fa660000fc660000fe66000000670000026700000467000006670000086700000a6700000c670000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -595,7 +595,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c4290000362a0000c23400003c350000a63a0000b441000044450000e6460000605300000e66000010660000126600001466000016660000186600001a6600001c6600001e66000020660000226600002466000026660000286600002a6600002c6600002e660000
+    m_ExpandedIDs: 00000000c4290000362a0000b62c0000c23400003c350000a63a0000b441000044450000e6460000ec660000ee660000f0660000f2660000f4660000f6660000f8660000fa660000fc660000fe66000000670000026700000467000006670000086700000a6700000c670000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -704,9 +704,9 @@ MonoBehaviour:
     height: 936
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 24d5fbff
-    m_LastClickedID: -273116
-    m_ExpandedIDs: 307efdff26e4feff70a1ffff78a1ffff8aa1ffff98a1ffffa8a1ffffb0a1ffff16a2ffff28a2ffff40a2ffffc6edffff7af7ffff7cf7ffff9efbffff00000000085800004e580000285900005c59000092590000
+    m_SelectedIDs: b237ffff
+    m_LastClickedID: 0
+    m_ExpandedIDs: 0494ffff0cedffff9efbffff000000000c58000052580000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace RPG.Character
 {
-    public class PowerAttackBehaviour : MonoBehaviour, SpecialAbility.ISpecialAbility
+    public class PowerAttackBehaviour : MonoBehaviour, ISpecialAbility
     {
         PowerAttackConfig config;
 
