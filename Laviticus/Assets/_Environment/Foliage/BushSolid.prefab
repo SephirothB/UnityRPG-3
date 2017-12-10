@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4054986872229154}
   - component: {fileID: 33261359788534150}
   - component: {fileID: 23115111075791124}
+  - component: {fileID: 114927152547739782}
   m_Layer: 0
   m_Name: PineTreeTrunk
   m_TagString: Untagged
@@ -37,6 +38,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4820730690703510}
   - component: {fileID: 65945459836644962}
+  - component: {fileID: 114269255641507132}
+  - component: {fileID: 114251990484851928}
   m_Layer: 0
   m_Name: BushSolid
   m_TagString: Untagged
@@ -54,6 +57,7 @@ GameObject:
   - component: {fileID: 4896132742788872}
   - component: {fileID: 33384167091622568}
   - component: {fileID: 23099616211929544}
+  - component: {fileID: 114345928766069464}
   m_Layer: 0
   m_Name: PineTreeTrunk_002
   m_TagString: Untagged
@@ -71,6 +75,7 @@ GameObject:
   - component: {fileID: 4385555198248800}
   - component: {fileID: 33228452612898914}
   - component: {fileID: 23894888605865074}
+  - component: {fileID: 114645769496753478}
   m_Layer: 0
   m_Name: PineTreeTrunk_001
   m_TagString: Untagged
@@ -88,6 +93,7 @@ GameObject:
   - component: {fileID: 4122752953958228}
   - component: {fileID: 33435364511550902}
   - component: {fileID: 23160111471520314}
+  - component: {fileID: 114087558438756546}
   m_Layer: 0
   m_Name: PineTreeLeaves
   m_TagString: Untagged
@@ -340,3 +346,84 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.37, y: 4.01, z: 3.13}
   m_Center: {x: 0.013171196, y: 2.01, z: 0.48}
+--- !u!114 &114087558438756546
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1959379685711082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: b1235756-43c0-4440-adf4-ac8a599e5663
+--- !u!114 &114251990484851928
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1187032396451966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: f78283da-97c0-4671-bfa0-7788124e88b5
+--- !u!114 &114269255641507132
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1187032396451966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -605777808, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isConnected: 1
+  _guid: 
+  _referenceCollection:
+    _collection:
+    - {fileID: 1187032396451966}
+    - {fileID: 1959379685711082}
+    - {fileID: 1001388397284224}
+    - {fileID: 1643245294843844}
+    - {fileID: 1547735847258538}
+  _assetGuid: 1db5d7a56210a6842b042396280772ff
+--- !u!114 &114345928766069464
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1547735847258538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 23b88521-4db2-4687-9a1b-2e667147e2d7
+--- !u!114 &114645769496753478
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1643245294843844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 3f38e28d-1f4a-4747-8bb5-359b479a38ec
+--- !u!114 &114927152547739782
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1001388397284224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: e8509f6d-48cb-4188-8b00-9b813d32c6a0

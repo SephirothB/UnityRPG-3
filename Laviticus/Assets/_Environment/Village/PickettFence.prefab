@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4724202670861050}
   - component: {fileID: 33804828595277704}
   - component: {fileID: 23222672235040870}
+  - component: {fileID: 114147759387458006}
   m_Layer: 0
   m_Name: BezierCurve
   m_TagString: Untagged
@@ -37,6 +38,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4485790557928886}
   - component: {fileID: 65451521691684042}
+  - component: {fileID: 114852644742784440}
+  - component: {fileID: 114835870736929328}
   m_Layer: 0
   m_Name: PickettFence
   m_TagString: Untagged
@@ -125,3 +128,45 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.3956437, y: 1.3882725, z: 0.23418275}
   m_Center: {x: -0.0196352, y: 0.6541363, z: 0.029457092}
+--- !u!114 &114147759387458006
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1251016186345454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 20213247-7043-4255-b8cc-6c1c4589fdf6
+--- !u!114 &114835870736929328
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1787622895009096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 1571d388-1dbb-4f79-a057-255e8cc75352
+--- !u!114 &114852644742784440
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1787622895009096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -605777808, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isConnected: 1
+  _guid: 
+  _referenceCollection:
+    _collection:
+    - {fileID: 1787622895009096}
+    - {fileID: 1251016186345454}
+  _assetGuid: 9462365560fea9046a1b5a2b34b74a38

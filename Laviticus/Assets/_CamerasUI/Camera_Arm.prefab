@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 81142226385811428}
   - component: {fileID: 114938224780674006}
   - component: {fileID: 114842844033652950}
+  - component: {fileID: 114483996047183600}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -40,6 +41,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4511491847702980}
   - component: {fileID: 114416872431956026}
+  - component: {fileID: 114555816795441970}
+  - component: {fileID: 114947090310763322}
   m_Layer: 0
   m_Name: Camera_Arm
   m_TagString: MainCamera
@@ -128,6 +131,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+--- !u!114 &114483996047183600
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1035055309594750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 824621ad-b369-4039-a246-0c022de85bbf
+--- !u!114 &114555816795441970
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1476512126015016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -605777808, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isConnected: 1
+  _guid: 
+  _referenceCollection:
+    _collection:
+    - {fileID: 1476512126015016}
+    - {fileID: 1035055309594750}
+  _assetGuid: c2a71df92448b48449a4c77248c81fdc
 --- !u!114 &114842844033652950
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -155,7 +188,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d02853f5d34bd8f429969ac34c466d07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  layerPriorities: 090000000a00000008000000
+  walkCursor: {fileID: 0}
+  enemyCursor: {fileID: 0}
+  cursorHotspot: {x: 0, y: 0}
+--- !u!114 &114947090310763322
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1476512126015016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 78ee6471-8ea9-494c-bcee-497c6ab378d5
 --- !u!124 &124772422014608762
 Behaviour:
   m_ObjectHideFlags: 1

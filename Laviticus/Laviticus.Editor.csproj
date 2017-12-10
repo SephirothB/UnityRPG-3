@@ -292,6 +292,12 @@
     <Reference Include="UnityEditor.Purchasing">
       <HintPath>C:/Users/fozzy/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/Editor/UnityEditor.Purchasing.dll</HintPath>
     </Reference>
+    <Reference Include="NestedPrefabs">
+      <HintPath>Assets/Nested Prefabs/NestedPrefabs.dll</HintPath>
+    </Reference>
+    <Reference Include="NestedPrefabs_Editor">
+      <HintPath>Assets/Nested Prefabs/NestedPrefabs_Editor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
     </Reference>
@@ -306,11 +312,16 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Editor\CameraRaycasterEditor.cs" />
+    <Compile Include="Assets\Nested Prefabs\Editor\CustomBuildPipeline.cs" />
+    <Compile Include="Assets\Nested Prefabs\Editor\NestedPrefabsBuildProcessor.cs" />
+    <Compile Include="Assets\Nested Prefabs\Editor\NestedPrefabsCloudBuildProcessor.cs" />
+    <Compile Include="Assets\Nested Prefabs\Editor\NestedPrefabsPreferences.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Asset Packs - For Students\SimpleFX - Synty\Materials\UnlitVertexColour_Alpha.shader" />
     <None Include="Assets\Audio\MentalDreamsAssets\SoldierSoundsPack\ReadMe!.txt" />
     <None Include="Assets\Audio\eight Bit Retro Rampage Free\Readme.txt" />
+    <None Include="Assets\Nested Prefabs\readme.txt" />
     <None Include="Assets\SETUP &amp; STANDARDS.txt" />
     <None Include="Assets\_Environment\Water\Water\Shaders\FXWaterPro.shader" />
     <None Include="Assets\_Weapons\Ranged Weapons\Ball Gun\RollerBall\RollerBallGuidelines.txt" />

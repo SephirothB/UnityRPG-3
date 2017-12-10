@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4751325762363740}
   - component: {fileID: 96384225283113358}
+  - component: {fileID: 114731651742103088}
   m_Layer: 0
   m_Name: Trail
   m_TagString: Untagged
@@ -40,6 +41,8 @@ GameObject:
   - component: {fileID: 135674651175898358}
   - component: {fileID: 54035446287156142}
   - component: {fileID: 114924773226357744}
+  - component: {fileID: 114810440117795496}
+  - component: {fileID: 114763691317742892}
   m_Layer: 0
   m_Name: Projectile(Fast)
   m_TagString: Untagged
@@ -217,6 +220,48 @@ TrailRenderer:
     generateLightingData: 0
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
+--- !u!114 &114731651742103088
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1034883417864266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 85dbc3e7-c7dc-4b17-89ec-78cce9d6daa9
+--- !u!114 &114763691317742892
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1079810871987498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 4b72be5f-f8e7-4cb0-bed6-361244667b26
+--- !u!114 &114810440117795496
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1079810871987498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -605777808, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isConnected: 1
+  _guid: 
+  _referenceCollection:
+    _collection:
+    - {fileID: 1079810871987498}
+    - {fileID: 1034883417864266}
+  _assetGuid: 8963ff73280ff0b4fbc19c63f333d32f
 --- !u!114 &114924773226357744
 MonoBehaviour:
   m_ObjectHideFlags: 1

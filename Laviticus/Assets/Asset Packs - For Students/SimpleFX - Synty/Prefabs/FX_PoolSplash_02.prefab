@@ -10,6 +10,8 @@ GameObject:
   - component: {fileID: 412718}
   - component: {fileID: 3339224}
   - component: {fileID: 2364016}
+  - component: {fileID: 114691869444368080}
+  - component: {fileID: 114946678052078348}
   m_Layer: 0
   m_Name: FX_PoolSplash_02
   m_TagString: Untagged
@@ -82,3 +84,32 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 196706}
   m_IsPrefabParent: 1
+--- !u!114 &114691869444368080
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 196706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -605777808, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isConnected: 1
+  _guid: 
+  _referenceCollection:
+    _collection:
+    - {fileID: 196706}
+  _assetGuid: 0d37f80e5a9508346b0ec65e1917e053
+--- !u!114 &114946678052078348
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 196706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: dd3c61ed-5a0b-4480-bd99-ab263f9b7999

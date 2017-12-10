@@ -20,6 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4299091440119382}
   - component: {fileID: 65875042441268146}
+  - component: {fileID: 114876202010409756}
+  - component: {fileID: 114726313188090420}
   m_Layer: 0
   m_Name: WatchTower
   m_TagString: Untagged
@@ -37,6 +39,7 @@ GameObject:
   - component: {fileID: 4123298129011102}
   - component: {fileID: 33756078019313346}
   - component: {fileID: 23444593298264518}
+  - component: {fileID: 114689406902767264}
   m_Layer: 0
   m_Name: Watch Tower
   m_TagString: Untagged
@@ -124,3 +127,45 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3, y: 7.01, z: 3}
   m_Center: {x: 0, y: 2.88, z: 0}
+--- !u!114 &114689406902767264
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1388322038052678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 9ab8cf1e-9e9f-447e-a06b-4b574bbf0429
+--- !u!114 &114726313188090420
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1040321284760140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 4138c6a6-5ce7-4d25-a2e1-641960605e7f
+--- !u!114 &114876202010409756
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1040321284760140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -605777808, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isConnected: 1
+  _guid: 
+  _referenceCollection:
+    _collection:
+    - {fileID: 1040321284760140}
+    - {fileID: 1388322038052678}
+  _assetGuid: b6dcadcb8a931c44f9cd96f1f83c5126

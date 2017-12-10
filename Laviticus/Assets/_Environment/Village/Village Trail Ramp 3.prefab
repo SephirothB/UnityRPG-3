@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 33977165866734610}
   - component: {fileID: 65030600214893562}
   - component: {fileID: 23197877351459820}
+  - component: {fileID: 114629477892161702}
+  - component: {fileID: 114673358814820276}
   m_Layer: 8
   m_Name: Village Trail Ramp 3
   m_TagString: Untagged
@@ -95,3 +97,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114629477892161702
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1387535865052738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -605777808, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isConnected: 1
+  _guid: 
+  _referenceCollection:
+    _collection:
+    - {fileID: 1387535865052738}
+  _assetGuid: 91d4d28089371474bbd64dcdcb0c4613
+--- !u!114 &114673358814820276
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1387535865052738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 7e3d520d-d454-45df-9800-f9992ef87160

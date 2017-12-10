@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4619560072533898}
   - component: {fileID: 33695886443915508}
   - component: {fileID: 23868992363696810}
+  - component: {fileID: 114145852577514578}
   m_Layer: 0
   m_Name: tree
   m_TagString: Untagged
@@ -37,6 +38,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4205377639916050}
   - component: {fileID: 65223895083256900}
+  - component: {fileID: 114206548856339446}
+  - component: {fileID: 114854998321456402}
   m_Layer: 0
   m_Name: DeadPineTree
   m_TagString: Untagged
@@ -124,3 +127,45 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.75, y: 6.84, z: 0.75}
   m_Center: {x: 0.03, y: 2.99, z: 0}
+--- !u!114 &114145852577514578
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1026095773669888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 78d7ef61-ed38-46a6-8340-c16e9d7559ee
+--- !u!114 &114206548856339446
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1328940315055508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -605777808, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isConnected: 1
+  _guid: 
+  _referenceCollection:
+    _collection:
+    - {fileID: 1328940315055508}
+    - {fileID: 1026095773669888}
+  _assetGuid: e28084a11f3defc478e8c8916df65b2c
+--- !u!114 &114854998321456402
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1328940315055508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 35feac45-682d-4289-865b-4dc53f6e0cf0

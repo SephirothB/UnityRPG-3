@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 4281075886339594}
   - component: {fileID: 33439128244052482}
   - component: {fileID: 23611415075500588}
+  - component: {fileID: 114409605850312564}
+  - component: {fileID: 114881509996676764}
   m_Layer: 0
   m_Name: Simple Bow
   m_TagString: Untagged
@@ -82,3 +84,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1563655986059756}
   m_Mesh: {fileID: 4300000, guid: 4f18c80df16a4ae4194559bba2f3ab9b, type: 3}
+--- !u!114 &114409605850312564
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1563655986059756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -605777808, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isConnected: 1
+  _guid: 
+  _referenceCollection:
+    _collection:
+    - {fileID: 1563655986059756}
+  _assetGuid: 7f105c0c272e6c146b4b41cdc53ea356
+--- !u!114 &114881509996676764
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1563655986059756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: fae7e113-bf8a-4578-a213-8b9382e340b9

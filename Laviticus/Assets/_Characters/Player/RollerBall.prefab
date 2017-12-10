@@ -24,6 +24,8 @@ GameObject:
   - component: {fileID: 135221295864534360}
   - component: {fileID: 54710427738851890}
   - component: {fileID: 114468330149546738}
+  - component: {fileID: 114361402201943430}
+  - component: {fileID: 114055509362040844}
   m_Layer: 0
   m_Name: RollerBall
   m_TagString: Untagged
@@ -100,6 +102,35 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &114055509362040844
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1817393436642040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: ca85d749-6310-44f7-85f2-2ab6a61e7f56
+--- !u!114 &114361402201943430
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1817393436642040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -605777808, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isConnected: 1
+  _guid: 
+  _referenceCollection:
+    _collection:
+    - {fileID: 1817393436642040}
+  _assetGuid: 99f2c5530cedc5d4fbdb79dfd796f8a8
 --- !u!114 &114468330149546738
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -111,7 +142,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d895eb1912d3164cbd59df7a3557c2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageCaused: 10
+  projectileSpeed: 0
+  projectileFirer: {fileID: 0}
 --- !u!135 &135221295864534360
 SphereCollider:
   m_ObjectHideFlags: 1

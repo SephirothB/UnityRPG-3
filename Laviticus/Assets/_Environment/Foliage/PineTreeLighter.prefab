@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33533690818992054}
   - component: {fileID: 23111453453621790}
   - component: {fileID: 65814960740123228}
+  - component: {fileID: 114623668366400890}
   m_Layer: 0
   m_Name: PineTreeTrunk
   m_TagString: Untagged
@@ -37,6 +38,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4866272650674600}
+  - component: {fileID: 114388801476154644}
+  - component: {fileID: 114915026515320462}
   m_Layer: 0
   m_Name: PineTreeLighter
   m_TagString: Untagged
@@ -54,6 +57,7 @@ GameObject:
   - component: {fileID: 4393774780912500}
   - component: {fileID: 33350603710750378}
   - component: {fileID: 23825259733189936}
+  - component: {fileID: 114784828643694430}
   m_Layer: 0
   m_Name: PineTreeLeaves
   m_TagString: Untagged
@@ -196,3 +200,58 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.6, y: 2, z: 0.6}
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &114388801476154644
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1691122429513032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -605777808, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isConnected: 1
+  _guid: 
+  _referenceCollection:
+    _collection:
+    - {fileID: 1691122429513032}
+    - {fileID: 1862438952103858}
+    - {fileID: 1169009706837334}
+  _assetGuid: 3b4538ba2d7a5e34b9d0769b047a2be1
+--- !u!114 &114623668366400890
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1169009706837334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 3fb145ea-4b10-4e89-b39b-9ec883299fca
+--- !u!114 &114784828643694430
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1862438952103858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 389357dc-823e-4621-97a1-5d1a57e95e54
+--- !u!114 &114915026515320462
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1691122429513032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 7c506a37-8f7f-48b5-b45b-28a0a5640864

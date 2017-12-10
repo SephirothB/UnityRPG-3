@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4086346873693990}
   - component: {fileID: 33169578309107164}
   - component: {fileID: 23778470937868830}
+  - component: {fileID: 114057469159085686}
   m_Layer: 0
   m_Name: SpikedWallGate
   m_TagString: Untagged
@@ -39,6 +40,8 @@ GameObject:
   - component: {fileID: 65747669505125790}
   - component: {fileID: 65271148693615814}
   - component: {fileID: 65508243420158626}
+  - component: {fileID: 114973981798462818}
+  - component: {fileID: 114597110785843160}
   m_Layer: 0
   m_Name: SpikedWallGate
   m_TagString: Untagged
@@ -153,3 +156,45 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.58489037, y: 5.99615, z: 0.746227}
   m_Center: {x: 2.075551, y: 2.498075, z: 0.10996829}
+--- !u!114 &114057469159085686
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1211875537909104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: e6093b4b-3676-4422-8bfe-dd05b6fe3cbc
+--- !u!114 &114597110785843160
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1316233603816582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 0fceb727-e136-4e90-8f39-2f3bfabb7bf9
+--- !u!114 &114973981798462818
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1316233603816582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -605777808, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isConnected: 1
+  _guid: 
+  _referenceCollection:
+    _collection:
+    - {fileID: 1316233603816582}
+    - {fileID: 1211875537909104}
+  _assetGuid: ca0841ade15e2334f899e1535cde0169

@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4871666763031738}
   - component: {fileID: 33216136154943142}
   - component: {fileID: 23940372659322992}
+  - component: {fileID: 114009407906367918}
   m_Layer: 0
   m_Name: Street_Lamp
   m_TagString: Untagged
@@ -39,6 +40,8 @@ GameObject:
   - component: {fileID: 65291698358507276}
   - component: {fileID: 65151952454030738}
   - component: {fileID: 65963314670154626}
+  - component: {fileID: 114711111037902088}
+  - component: {fileID: 114588027929434902}
   m_Layer: 0
   m_Name: Hanging Street Lamp
   m_TagString: Untagged
@@ -154,3 +157,45 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5913377, y: 0.8467517, z: 0.591346}
   m_Center: {x: 1.0931721, y: 2.5490334, z: 0.01020813}
+--- !u!114 &114009407906367918
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1842711371680984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: f39ef467-5afe-4445-8c23-ef8762be71c2
+--- !u!114 &114588027929434902
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1895625930017230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: e1201d76-7f3f-4318-b684-0a19a630fa80
+--- !u!114 &114711111037902088
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1895625930017230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -605777808, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isConnected: 1
+  _guid: 
+  _referenceCollection:
+    _collection:
+    - {fileID: 1895625930017230}
+    - {fileID: 1842711371680984}
+  _assetGuid: bd2c85e2c926d4845ae18afc1a3f4e55

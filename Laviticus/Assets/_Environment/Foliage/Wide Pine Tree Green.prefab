@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 33806337679687300}
   - component: {fileID: 23063010824785362}
   - component: {fileID: 136384722394733756}
+  - component: {fileID: 114295713731978014}
+  - component: {fileID: 114790608142500710}
   m_Layer: 2
   m_Name: Wide Pine Tree Green
   m_TagString: Untagged
@@ -84,6 +86,35 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1423475316344466}
   m_Mesh: {fileID: 4300000, guid: a1f76e950fa185248bb20709ea355f0c, type: 3}
+--- !u!114 &114295713731978014
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1423475316344466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -605777808, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isConnected: 1
+  _guid: 
+  _referenceCollection:
+    _collection:
+    - {fileID: 1423475316344466}
+  _assetGuid: 52f75c63213732549a3fa413da302c32
+--- !u!114 &114790608142500710
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1423475316344466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 92f76a4d-dcc9-4426-af28-9b8c6c364056
 --- !u!136 &136384722394733756
 CapsuleCollider:
   m_ObjectHideFlags: 1

@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 4090105305494314}
   - component: {fileID: 198455024752777598}
   - component: {fileID: 199017654696818114}
+  - component: {fileID: 114184284429154196}
+  - component: {fileID: 114821097778318286}
   m_Layer: 11
   m_Name: PA L1 Particle
   m_TagString: Untagged
@@ -41,6 +43,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114184284429154196
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1929678046106076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -605777808, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isConnected: 1
+  _guid: 
+  _referenceCollection:
+    _collection:
+    - {fileID: 1929678046106076}
+  _assetGuid: ba6cfbb6be9bfea47b8fc2eb1ed14e51
+--- !u!114 &114821097778318286
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1929678046106076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: cbe289a2-78b9-4efe-b27c-f1506e1fd356
 --- !u!198 &198455024752777598
 ParticleSystem:
   m_ObjectHideFlags: 1

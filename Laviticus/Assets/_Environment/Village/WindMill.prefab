@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33241766649340782}
   - component: {fileID: 23192913663044422}
   - component: {fileID: 136750357224237930}
+  - component: {fileID: 114002282840466680}
   m_Layer: 0
   m_Name: Wind_Mill_Building
   m_TagString: Untagged
@@ -40,6 +41,7 @@ GameObject:
   - component: {fileID: 33321530680580432}
   - component: {fileID: 23000746278190946}
   - component: {fileID: 114303246207418346}
+  - component: {fileID: 114712794434820336}
   m_Layer: 0
   m_Name: Wind_Mill_Blades
   m_TagString: Untagged
@@ -55,6 +57,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4856087298316178}
+  - component: {fileID: 114667037882009748}
+  - component: {fileID: 114100622298032936}
   m_Layer: 0
   m_Name: WindMill
   m_TagString: Untagged
@@ -192,6 +196,30 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1368968028811168}
   m_Mesh: {fileID: 4300000, guid: 4bd13a04647831b4ab9b359ce38b317d, type: 3}
+--- !u!114 &114002282840466680
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1230046235247606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 868fc3b1-9df4-43fa-84b1-6d25f8c61327
+--- !u!114 &114100622298032936
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1800113367532696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: abef0bc5-4d07-4dd6-8f3e-5846e44ab688
 --- !u!114 &114303246207418346
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -206,6 +234,37 @@ MonoBehaviour:
   xRotationsPerMinute: 1
   yRotationsPerMinute: 1
   zRotationsPerMinute: 1
+--- !u!114 &114667037882009748
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1800113367532696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -605777808, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isConnected: 1
+  _guid: 
+  _referenceCollection:
+    _collection:
+    - {fileID: 1800113367532696}
+    - {fileID: 1368968028811168}
+    - {fileID: 1230046235247606}
+  _assetGuid: 833a3cbec60a98b4991b7bfaa00b878f
+--- !u!114 &114712794434820336
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1368968028811168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 20226aa8-e31d-481e-b0bb-8e628ca17ef3
 --- !u!136 &136750357224237930
 CapsuleCollider:
   m_ObjectHideFlags: 1

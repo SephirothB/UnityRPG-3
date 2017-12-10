@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 4893554851578796}
   - component: {fileID: 33422907050045368}
   - component: {fileID: 23869988779779602}
+  - component: {fileID: 114537564375489562}
+  - component: {fileID: 114451819333749760}
   m_Layer: 0
   m_Name: Dirt Old Hoe
   m_TagString: Untagged
@@ -82,3 +84,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1274797246840802}
   m_Mesh: {fileID: 4300002, guid: eee292b300b8dfa41be00641ff83b2a1, type: 3}
+--- !u!114 &114451819333749760
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1274797246840802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: f4a3df1b-bc38-4c24-acd2-9cf2c85d7dd6
+--- !u!114 &114537564375489562
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1274797246840802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -605777808, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isConnected: 1
+  _guid: 
+  _referenceCollection:
+    _collection:
+    - {fileID: 1274797246840802}
+  _assetGuid: cc0dbe33ee8adbe4eb124e2d95d37fe4

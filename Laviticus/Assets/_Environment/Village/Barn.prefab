@@ -19,6 +19,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4003299053231854}
+  - component: {fileID: 114191884910958040}
+  - component: {fileID: 114223697678325648}
   m_Layer: 0
   m_Name: Barn
   m_TagString: Untagged
@@ -45,6 +47,7 @@ GameObject:
   - component: {fileID: 65458818638876288}
   - component: {fileID: 65962885712925770}
   - component: {fileID: 65038241836583104}
+  - component: {fileID: 114716209989492160}
   m_Layer: 0
   m_Name: Barn
   m_TagString: Untagged
@@ -237,3 +240,45 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.767723, y: 1.1188984, z: 3.5364313}
   m_Center: {x: -8.159088, y: 2.3646564, z: -0.12545776}
+--- !u!114 &114191884910958040
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1047976538902686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -605777808, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isConnected: 1
+  _guid: 
+  _referenceCollection:
+    _collection:
+    - {fileID: 1047976538902686}
+    - {fileID: 1660707762966430}
+  _assetGuid: 0e76e7df93286634b96ff3b8c4fc5d81
+--- !u!114 &114223697678325648
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1047976538902686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: a1b40d2a-1c1a-430a-bda0-b53dfe395935
+--- !u!114 &114716209989492160
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1660707762966430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 4612a93d-1248-4ce9-8236-10516e4a744c

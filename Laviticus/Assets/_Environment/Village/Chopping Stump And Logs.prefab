@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33048393475513774}
   - component: {fileID: 23279638439134568}
   - component: {fileID: 65682109962757708}
+  - component: {fileID: 114261674939033242}
   m_Layer: 0
   m_Name: Logs
   m_TagString: Untagged
@@ -40,6 +41,7 @@ GameObject:
   - component: {fileID: 33342539679761398}
   - component: {fileID: 23839908346152562}
   - component: {fileID: 65355773702046240}
+  - component: {fileID: 114754771959700894}
   m_Layer: 0
   m_Name: Axe
   m_TagString: Untagged
@@ -58,6 +60,7 @@ GameObject:
   - component: {fileID: 33674015097416644}
   - component: {fileID: 23502804477256100}
   - component: {fileID: 65637839980526074}
+  - component: {fileID: 114548994910638298}
   m_Layer: 0
   m_Name: Stump
   m_TagString: Untagged
@@ -73,6 +76,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4764700933583732}
+  - component: {fileID: 114687094234564482}
+  - component: {fileID: 114059313837473314}
   m_Layer: 0
   m_Name: Chopping Stump And Logs
   m_TagString: Untagged
@@ -296,3 +301,71 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.9857321, y: 0.42125002, z: 1.5897121}
   m_Center: {x: -1.5363541, y: -0.207536, z: 1.689512}
+--- !u!114 &114059313837473314
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1919361415445612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: be9bf6ba-3ec4-437e-bf29-b2ac96b4a9f3
+--- !u!114 &114261674939033242
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1057940695220790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 9ec32e66-e6c9-4a01-9a85-dd92b7639ca6
+--- !u!114 &114548994910638298
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1711272896951046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: f82793e3-af55-4620-be7f-86ba75d723c6
+--- !u!114 &114687094234564482
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1919361415445612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -605777808, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isConnected: 1
+  _guid: 
+  _referenceCollection:
+    _collection:
+    - {fileID: 1919361415445612}
+    - {fileID: 1060892804122674}
+    - {fileID: 1057940695220790}
+    - {fileID: 1711272896951046}
+  _assetGuid: 3b1657df01f800641ad39da965d63e08
+--- !u!114 &114754771959700894
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1060892804122674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: e03f607c-358e-460a-8cea-43690f8102ba

@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4070144230778154}
   - component: {fileID: 33162961415514686}
   - component: {fileID: 23316373056155498}
+  - component: {fileID: 114306054377828244}
   m_Layer: 0
   m_Name: DungeonEntrance
   m_TagString: Untagged
@@ -39,6 +40,8 @@ GameObject:
   - component: {fileID: 65091874062225656}
   - component: {fileID: 65448345306590132}
   - component: {fileID: 65836845482460032}
+  - component: {fileID: 114627466537515034}
+  - component: {fileID: 114337572526253092}
   m_Layer: 0
   m_Name: Dungeon Entrance
   m_TagString: Untagged
@@ -150,3 +153,45 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 2.527518, z: 0.99999976}
   m_Center: {x: -1.25, y: 1.2286559, z: -0.23244858}
+--- !u!114 &114306054377828244
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1087260065753270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 670f07e4-724a-4c1b-ac41-28734a5a58ab
+--- !u!114 &114337572526253092
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1242068773073854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 1cb1dcdb-359e-4852-bc23-363d7d63fef6
+--- !u!114 &114627466537515034
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1242068773073854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -605777808, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isConnected: 1
+  _guid: 
+  _referenceCollection:
+    _collection:
+    - {fileID: 1242068773073854}
+    - {fileID: 1087260065753270}
+  _assetGuid: b4eaf413d23a3b1488698b3e83bbd6b0

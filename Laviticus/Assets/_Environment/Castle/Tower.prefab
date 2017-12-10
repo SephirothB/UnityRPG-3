@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 23505025964382778}
   - component: {fileID: 95378682813693256}
   - component: {fileID: 136256402393087116}
+  - component: {fileID: 114885758670331078}
+  - component: {fileID: 114515578179245348}
   m_Layer: 0
   m_Name: Tower
   m_TagString: Untagged
@@ -104,6 +106,35 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114515578179245348
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1157578104328586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 1d5706cb-85f5-42f2-8ae2-a2eeaaea7261
+--- !u!114 &114885758670331078
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1157578104328586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -605777808, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isConnected: 1
+  _guid: 
+  _referenceCollection:
+    _collection:
+    - {fileID: 1157578104328586}
+  _assetGuid: a485f31320b4a7b48abf4c6db97e1d30
 --- !u!136 &136256402393087116
 CapsuleCollider:
   m_ObjectHideFlags: 1

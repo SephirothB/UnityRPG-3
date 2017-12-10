@@ -25,6 +25,9 @@ namespace RPG.Character
         [SerializeField] SpecialAbility[] abilities;
         [SerializeField] AudioClip[] damageSounds;
         [SerializeField] AudioClip[] deathSounds;
+        [Range(.1f, 1.0f)] [SerializeField] float criticalHitChance = 0.1f;
+        [SerializeField] float criticalHitMultiplier = 1.25f;
+        [SerializeField] ParticleSystem criticalHitParticleSystem;
 
         const string DEATH_ANIM = "Death";
         const string ATTACK_ANIM = "Attack";
@@ -32,10 +35,12 @@ namespace RPG.Character
         AudioSource audio;
         Animator animator;
         PowerAttackConfig config;
+        Enemy currentTarget;
+        
 
         private float currentHealthPoints = 100f;
         float lastHitTime = 0f;
-        GameObject currentTarget;
+        //GameObject currentTarget;
         CameraRaycaster cameraRaycaster;
 
         //bool playerisDead;
@@ -58,10 +63,11 @@ namespace RPG.Character
 
         public void TakeDamage(float damage)
         {
-            bool playerIsDead = (currentHealthPoints - damage <= 0);
-            ReduceHealth(damage);
-            
-            if (playerIsDead)
+            currentHealthPoints = Mathf.Clamp(currentHealthPoints - damage, 0f, maxHealthPoints);
+            audio.clip = damageSounds[UnityEngine.Random.Range(0, damageSounds.Length)];
+            //TODO remove once ready audio.Play();
+
+            if (currentHealthPoints <= 0)
             {
 
                               
@@ -77,6 +83,11 @@ namespace RPG.Character
             
         }
 
+        public void AddHealth(float healAmount)
+        {
+            currentHealthPoints = Mathf.Clamp(currentHealthPoints + healAmount, 0f, maxHealthPoints);
+        }
+
         IEnumerator KillPlayer()
         {
             animator.SetTrigger(DEATH_ANIM);
@@ -90,28 +101,31 @@ namespace RPG.Character
             
         }
 
-        private void ReduceHealth(float damage)
-        {
-            currentHealthPoints = Mathf.Clamp(currentHealthPoints - damage, 0f, maxHealthPoints);
-            audio.clip = damageSounds[UnityEngine.Random.Range(0, damageSounds.Length)];
-            //TODO remove once ready audio.Play();
-        }
+
 
 
         // Use this for initialization
         void Start()
         {
 
-
+            audio = GetComponent<AudioSource>();
             RegisterForMouseClick();
             SetCurrentMaxHealth();
             RegisterWeaponInUse();
             SetupRuntimeAnimator();
-            abilities[0].AttachComponent(gameObject);
-            audio = GetComponent<AudioSource>();
-
-
+            AttachInitialAbilities();
+            
         }
+
+        private void AttachInitialAbilities()
+        {
+            for (int abilityIndex = 0; abilityIndex < abilities.Length; abilityIndex++)
+            {
+                abilities[abilityIndex].AttachComponent(gameObject);
+            }
+            
+        }
+
         void RegisterForMouseClick()
         {
             cameraRaycaster = FindObjectOfType<CameraRaycaster>();
@@ -120,7 +134,7 @@ namespace RPG.Character
 
         void OnMouseOverEnemy(Enemy enemy)
         {
-            //currentTarget = enemy;
+            currentTarget = enemy;
             //var enemyHit = enemy.gameObject;
 
             if (Input.GetMouseButtonDown(0) && IsEnemyInRange(enemy))
@@ -129,12 +143,12 @@ namespace RPG.Character
             }
             else if (Input.GetMouseButtonDown(1))
             {
-                AttemptSpecialAbility(0, enemy);
+                AttemptSpecialAbility(0);
 
             }
         }
 
-        private void AttemptSpecialAbility(int abilityIndex, Enemy enemy)
+        private void AttemptSpecialAbility(int abilityIndex)
         {
             
             var energyComponent = GetComponent<Energy>();
@@ -142,7 +156,7 @@ namespace RPG.Character
             if (energyComponent.IsEnergyAvailable(energyCost))
             {
                 energyComponent.ConsumeEnergy(energyCost);
-                var abilityParams = new AbilityUseParams(enemy, baseDamage);
+                var abilityParams = new AbilityUseParams(currentTarget, baseDamage);
                 abilities[abilityIndex].Engage(abilityParams);
             }
         }
@@ -200,10 +214,24 @@ namespace RPG.Character
            if (Time.time - lastHitTime > weaponInUse.GetMinTimeBetweenHits())
             {
                 animator.SetTrigger(ATTACK_ANIM);
-                target.TakeDamage(baseDamage);
+                target.TakeDamage(CalculateDamage());
                 lastHitTime = Time.time;
             }
 
+        }
+        private float CalculateDamage()
+        {
+            bool isCriticalHit = UnityEngine.Random.Range(0f, 1f) <= criticalHitChance;
+            float damageBeforeCritical = baseDamage + weaponInUse.GetAdditionalDamage();
+            if (isCriticalHit)
+            {
+                criticalHitParticleSystem.Play();
+                return damageBeforeCritical * criticalHitMultiplier;
+            }
+            else
+            {
+                return damageBeforeCritical;
+            }
         }
 
         //Energy code below
@@ -211,7 +239,36 @@ namespace RPG.Character
         // Update is called once per frame
         void Update()
         {
+            if (HealthAsPercentage > Mathf.Epsilon)
+            {
+                ScanForAbilityKeyDown();
+            }
+        }
 
+        private void ScanForAbilityKeyDown()
+        {
+
+            for (int keyIndex = 1; keyIndex < abilities.Length; keyIndex++)
+            {
+                if (Input.GetKeyDown(keyIndex.ToString()))
+                {
+
+                    AttemptSpecialAbility(keyIndex);
+                }
+            }
+            //if (Input.GetKeyDown("1"))
+            //{
+
+            //    AttemptSpecialAbility(0);
+            //}
+            //if (Input.GetKeyDown("1"))
+            //{
+            //    AttemptSpecialAbility(1);
+            //}
+            //if (Input.GetKeyDown("1"))
+            //{
+            //    AttemptSpecialAbility(2);
+            //}
         }
     }
 }

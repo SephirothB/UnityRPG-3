@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 33967460264999256}
   - component: {fileID: 23442195021149346}
   - component: {fileID: 136089533143871216}
+  - component: {fileID: 114555717599534560}
+  - component: {fileID: 114652584120996540}
   m_Layer: 0
   m_Name: Fire Pit
   m_TagString: Untagged
@@ -87,6 +89,35 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1373681026616238}
   m_Mesh: {fileID: 4300000, guid: d5aba5824fae9c74aba57c288a829168, type: 3}
+--- !u!114 &114555717599534560
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1373681026616238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -605777808, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isConnected: 1
+  _guid: 
+  _referenceCollection:
+    _collection:
+    - {fileID: 1373681026616238}
+  _assetGuid: 6a409aa117cac1a4eb92d54d34ada066
+--- !u!114 &114652584120996540
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1373681026616238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 6e884fb5-6e30-4fbb-9004-1129d3268532
 --- !u!136 &136089533143871216
 CapsuleCollider:
   m_ObjectHideFlags: 1

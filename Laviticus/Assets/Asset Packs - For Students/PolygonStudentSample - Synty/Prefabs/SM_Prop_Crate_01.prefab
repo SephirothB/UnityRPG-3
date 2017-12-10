@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3332412}
   - component: {fileID: 2374688}
   - component: {fileID: 65334453840681480}
+  - component: {fileID: 114508093071557320}
+  - component: {fileID: 114296679072720032}
   m_Layer: 0
   m_Name: SM_Prop_Crate_01
   m_TagString: Untagged
@@ -40,6 +42,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -55,6 +58,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -93,3 +97,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.7665404, y: 0.76653725, z: 0.766537}
   m_Center: {x: 0.000000059604645, y: 0.38326862, z: 0}
+--- !u!114 &114296679072720032
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 139386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 79abc607-d031-48b8-a05e-580b0a1ee759
+--- !u!114 &114508093071557320
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 139386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -605777808, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isConnected: 1
+  _guid: 
+  _referenceCollection:
+    _collection:
+    - {fileID: 139386}
+  _assetGuid: c2849fd453abd0445a702a035f04ac60

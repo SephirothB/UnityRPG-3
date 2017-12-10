@@ -20,6 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4299091440119382}
   - component: {fileID: 65875042441268146}
+  - component: {fileID: 114118323499174264}
+  - component: {fileID: 114679182082875848}
   m_Layer: 0
   m_Name: Wooden Watch Tower 1
   m_TagString: Untagged
@@ -37,6 +39,7 @@ GameObject:
   - component: {fileID: 4283663820795938}
   - component: {fileID: 33212641771989858}
   - component: {fileID: 23447564718197186}
+  - component: {fileID: 114169193273129782}
   m_Layer: 0
   m_Name: Watch Tower
   m_TagString: Untagged
@@ -124,3 +127,45 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3, y: 7.01, z: 3}
   m_Center: {x: 0, y: 2.88, z: 0}
+--- !u!114 &114118323499174264
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1040321284760140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -605777808, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isConnected: 1
+  _guid: 
+  _referenceCollection:
+    _collection:
+    - {fileID: 1040321284760140}
+    - {fileID: 1378306201552136}
+  _assetGuid: df7a64760b600274ebf1c2dcba7e82e9
+--- !u!114 &114169193273129782
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1378306201552136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 6d5545da-a05f-4058-8ee6-bacbe7dfd8ad
+--- !u!114 &114679182082875848
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1040321284760140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 6251382c-1a19-4440-b21e-3f6282f95bbb

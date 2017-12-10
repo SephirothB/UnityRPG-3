@@ -69,15 +69,16 @@ namespace RPG.Character
         IEnumerator KillEnemy()
         {
             print("Enemy Dead");
-
+            
             audio.clip = deathSounds[UnityEngine.Random.Range(0, deathSounds.Length)];
-            //TODO remove once ready audio.Play();
+            audio.Play();
+            Destroy(gameObject);
 
-            animator.SetTrigger(DEATH_ANIM);
+            //animator.SetTrigger(DEATH_ANIM);
 
             yield return new WaitForSecondsRealtime(audio.clip.length);
 
-            Destroy(this);
+            
             
         }
         private void ReduceHealth(float damage)

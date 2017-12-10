@@ -29,7 +29,8 @@ namespace RPG.Character
         private void PlayParticleEffect()
         {
            
-            GameObject newParticlePrefab = Instantiate(config.GetParticlePrefab(), transform.position, Quaternion.identity);
+
+            GameObject newParticlePrefab = Instantiate(config.GetParticlePrefab(), transform.position, config.GetParticlePrefab().transform.rotation);
             ParticleSystem newParticle = newParticlePrefab.GetComponent<ParticleSystem>();
             newParticle.Play();
             Destroy(newParticlePrefab, newParticle.main.duration);
@@ -49,8 +50,8 @@ namespace RPG.Character
             foreach (RaycastHit hit in hits)
             {
                 var damageable = hit.collider.gameObject.GetComponent<IDamagable>();
-
-                if (damageable != null)
+                bool hitPlayer = hit.collider.gameObject.GetComponent<Player>();
+                if (damageable != null && !hitPlayer)
                 {
                     float damagetoDeal = useParams.baseDamage + config.GetDamageMulti();
                     damageable.TakeDamage(damagetoDeal);

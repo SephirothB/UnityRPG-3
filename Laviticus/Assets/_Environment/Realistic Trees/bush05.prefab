@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 19315598}
   - component: {fileID: 3348290}
   - component: {fileID: 2305694}
+  - component: {fileID: 114519223922818442}
+  - component: {fileID: 114199642346744258}
   m_Layer: 0
   m_Name: bush05
   m_TagString: Untagged
@@ -1957,3 +1959,32 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 128002}
   m_IsPrefabParent: 1
+--- !u!114 &114199642346744258
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 128002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 80e02e4a-8b70-4453-ac85-2f8d058d7ece
+--- !u!114 &114519223922818442
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 128002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -605777808, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isConnected: 1
+  _guid: 
+  _referenceCollection:
+    _collection:
+    - {fileID: 128002}
+  _assetGuid: bb660abd3b29d9f44866fd79795dbca4

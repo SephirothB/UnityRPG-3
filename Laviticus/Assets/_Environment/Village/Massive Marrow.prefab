@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 4813294931787184}
   - component: {fileID: 33112732943493748}
   - component: {fileID: 23545857089353860}
+  - component: {fileID: 114064687200888574}
+  - component: {fileID: 114683471524274512}
   m_Layer: 0
   m_Name: Massive Marrow
   m_TagString: Untagged
@@ -82,3 +84,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1501586753478670}
   m_Mesh: {fileID: 4300000, guid: bf5b23690d4b5d742b2843daad82d402, type: 3}
+--- !u!114 &114064687200888574
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1501586753478670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -605777808, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isConnected: 1
+  _guid: 
+  _referenceCollection:
+    _collection:
+    - {fileID: 1501586753478670}
+  _assetGuid: 12f912cf22db3d948a728f686b6a022c
+--- !u!114 &114683471524274512
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1501586753478670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 84b73d67-c927-4c22-8d86-65dce7677dc7

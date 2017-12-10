@@ -20,6 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4678339299686394}
   - component: {fileID: 65128003068084936}
+  - component: {fileID: 114454713229995672}
+  - component: {fileID: 114031555003954764}
   m_Layer: 0
   m_Name: Simple Wooden Bench
   m_TagString: Untagged
@@ -38,6 +40,7 @@ GameObject:
   - component: {fileID: 33931694811436696}
   - component: {fileID: 23968960302907960}
   - component: {fileID: 65677756115580244}
+  - component: {fileID: 114475672879358504}
   m_Layer: 0
   m_Name: SimpleWoodenBench
   m_TagString: Untagged
@@ -138,3 +141,45 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.238968, y: 0.848063, z: 0.567636}
   m_Center: {x: -0.016380966, y: 0.4240315, z: 0.01004}
+--- !u!114 &114031555003954764
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1716824859944226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: d4ea57cc-975d-4e0e-a7b5-0086977a6293
+--- !u!114 &114454713229995672
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1716824859944226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -605777808, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isConnected: 1
+  _guid: 
+  _referenceCollection:
+    _collection:
+    - {fileID: 1716824859944226}
+    - {fileID: 1931902894686380}
+  _assetGuid: b2dffffaa2688e947aedabb3af1e1cdd
+--- !u!114 &114475672879358504
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1931902894686380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: b1cf9d74-3455-4152-a8cd-e7366bd7ad81

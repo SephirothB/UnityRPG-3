@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4350852334959338}
   - component: {fileID: 33304061057725348}
   - component: {fileID: 23873515291870716}
+  - component: {fileID: 114643752520984116}
   m_Layer: 0
   m_Name: Cottage
   m_TagString: Untagged
@@ -39,6 +40,8 @@ GameObject:
   - component: {fileID: 65817623026907046}
   - component: {fileID: 65789490887073012}
   - component: {fileID: 65277299784110850}
+  - component: {fileID: 114678641816069438}
+  - component: {fileID: 114117176675359898}
   m_Layer: 0
   m_Name: Wacky Cottage
   m_TagString: Untagged
@@ -157,3 +160,45 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 9.862119, y: 3.8084183, z: 7.740205}
   m_Center: {x: -1.1857758, y: 1.8410738, z: 0}
+--- !u!114 &114117176675359898
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1593378893691230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 31193051-098d-4e1a-958b-d16ae92fea17
+--- !u!114 &114643752520984116
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1138381578845362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 2da1a710-e57a-48c1-b623-2b6cecb0a47a
+--- !u!114 &114678641816069438
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1593378893691230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -605777808, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isConnected: 1
+  _guid: 
+  _referenceCollection:
+    _collection:
+    - {fileID: 1593378893691230}
+    - {fileID: 1138381578845362}
+  _assetGuid: 6ed464a994de9d04f80302602959cef1

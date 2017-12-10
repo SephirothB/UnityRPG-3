@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 4075140287308286}
   - component: {fileID: 114081307680821542}
   - component: {fileID: 114842109689950966}
+  - component: {fileID: 114616425629438874}
+  - component: {fileID: 114471215373500356}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -55,6 +57,35 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 5
+--- !u!114 &114471215373500356
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1197682017273380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 1c3fe002-b066-4a2d-ab5e-d338b10ba9fc
+--- !u!114 &114616425629438874
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1197682017273380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -605777808, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isConnected: 1
+  _guid: 
+  _referenceCollection:
+    _collection:
+    - {fileID: 1197682017273380}
+  _assetGuid: bcb2767aed964d142b796dd9996079ad
 --- !u!114 &114842109689950966
 MonoBehaviour:
   m_ObjectHideFlags: 1

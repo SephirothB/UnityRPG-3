@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 33778002026842088}
   - component: {fileID: 23946718983703830}
   - component: {fileID: 65820278812437126}
+  - component: {fileID: 114384804713070238}
+  - component: {fileID: 114322726884949030}
   m_Layer: 11
   m_Name: Simple Wooden Cart
   m_TagString: Untagged
@@ -96,3 +98,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 6.233194, y: 3.417341, z: 11.460569}
   m_Center: {x: -0.45632315, y: 1.7226986, z: 3.5080962}
+--- !u!114 &114322726884949030
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1466466078769584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: f16cee31-f809-430f-8a07-8399d9398bd8
+--- !u!114 &114384804713070238
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1466466078769584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -605777808, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isConnected: 1
+  _guid: 
+  _referenceCollection:
+    _collection:
+    - {fileID: 1466466078769584}
+  _assetGuid: e1266e6eae510e046a1b6998f5d8f622

@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 33903713017729104}
   - component: {fileID: 23449544071258568}
   - component: {fileID: 65721363969717050}
+  - component: {fileID: 114072952991844462}
+  - component: {fileID: 114076987585421388}
   m_Layer: 11
   m_Name: WheelBarrow
   m_TagString: Untagged
@@ -96,3 +98,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.1908765, y: 2.9563792, z: 7.2750483}
   m_Center: {x: 0.17742898, y: 1.4807895, z: -0.1702515}
+--- !u!114 &114072952991844462
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1177285574596056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -605777808, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isConnected: 1
+  _guid: 
+  _referenceCollection:
+    _collection:
+    - {fileID: 1177285574596056}
+  _assetGuid: eaa52d883b6ece74ab295cf26f627023
+--- !u!114 &114076987585421388
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1177285574596056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 17b113a8-97ce-4288-b6a7-95f48125f371

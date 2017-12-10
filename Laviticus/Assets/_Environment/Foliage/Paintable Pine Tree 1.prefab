@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 33754282192359072}
   - component: {fileID: 136782049014872944}
   - component: {fileID: 23713183619270152}
+  - component: {fileID: 114068998386897932}
+  - component: {fileID: 114811007143508142}
   m_Layer: 2
   m_Name: Paintable Pine Tree 1
   m_TagString: Untagged
@@ -84,6 +86,35 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1344007212325368}
   m_Mesh: {fileID: 4300000, guid: b6049de51dd726744ba1cee548ab42c5, type: 3}
+--- !u!114 &114068998386897932
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1344007212325368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -605777808, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isConnected: 1
+  _guid: 
+  _referenceCollection:
+    _collection:
+    - {fileID: 1344007212325368}
+  _assetGuid: dabfd4d2c139acc41b96101667928e69
+--- !u!114 &114811007143508142
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1344007212325368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 40c9d5f1-0d4f-4355-89ab-23c72e24fa62
 --- !u!136 &136782049014872944
 CapsuleCollider:
   m_ObjectHideFlags: 1

@@ -20,6 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4773945709427604}
   - component: {fileID: 64087219811110432}
+  - component: {fileID: 114277432102914410}
+  - component: {fileID: 114727647466846950}
   m_Layer: 0
   m_Name: Bridge
   m_TagString: Untagged
@@ -37,6 +39,7 @@ GameObject:
   - component: {fileID: 4117486393850804}
   - component: {fileID: 33233128623177396}
   - component: {fileID: 23894725129553062}
+  - component: {fileID: 114385401821783496}
   m_Layer: 0
   m_Name: Stone Bridge
   m_TagString: Untagged
@@ -131,3 +134,45 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300002, guid: b918e7f2b4b88814faa9de13f5bda206, type: 3}
+--- !u!114 &114277432102914410
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1642192000386654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -605777808, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isConnected: 1
+  _guid: 
+  _referenceCollection:
+    _collection:
+    - {fileID: 1642192000386654}
+    - {fileID: 1844195484970028}
+  _assetGuid: 0d4ac88da16aac24c9a41e659e4d6f9e
+--- !u!114 &114385401821783496
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1844195484970028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 86a57321-3ceb-43bb-b5e7-03c26c4689cd
+--- !u!114 &114727647466846950
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1642192000386654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: f1cff544-87a4-4b83-8836-00e01df65910

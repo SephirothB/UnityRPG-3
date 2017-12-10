@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 222792390737962702}
   - component: {fileID: 114405381744789154}
   - component: {fileID: 114482250620368490}
+  - component: {fileID: 114602200280233738}
   m_Layer: 5
   m_Name: Health Bar
   m_TagString: Untagged
@@ -40,6 +41,8 @@ GameObject:
   - component: {fileID: 223482854617080494}
   - component: {fileID: 114352185840439852}
   - component: {fileID: 114299979998413088}
+  - component: {fileID: 114283997893435232}
+  - component: {fileID: 114582701933955146}
   m_Layer: 0
   m_Name: Enemy Canvas
   m_TagString: Untagged
@@ -47,6 +50,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &114283997893435232
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1311539807392560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -605777808, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isConnected: 1
+  _guid: 
+  _referenceCollection:
+    _collection:
+    - {fileID: 1311539807392560}
+    - {fileID: 1280087293980244}
+  _assetGuid: 9a9d70d10b9331d469e57254147e0430
 --- !u!114 &114299979998413088
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -121,6 +142,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cff48e609d2e90f449b76ce61dcb7bbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114582701933955146
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1311539807392560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 08abdfcd-a039-43a5-87a2-0f7418a8db2d
+--- !u!114 &114602200280233738
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1280087293980244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: a2db87da-076c-4727-b8fd-51bed74a0ada
 --- !u!222 &222792390737962702
 CanvasRenderer:
   m_ObjectHideFlags: 1

@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4567717018958838}
   - component: {fileID: 33045905030979236}
   - component: {fileID: 23678108832096228}
+  - component: {fileID: 114253880823932090}
   m_Layer: 0
   m_Name: Spiked_Wall
   m_TagString: Untagged
@@ -37,6 +38,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4489140927154420}
   - component: {fileID: 65243921997604636}
+  - component: {fileID: 114530379520743986}
+  - component: {fileID: 114369996946704102}
   m_Layer: 0
   m_Name: SpikedWall
   m_TagString: Untagged
@@ -125,3 +128,45 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.5359716, y: 2.9105256, z: 0.3393115}
   m_Center: {x: 0.029488266, y: 1.439437, z: 0.029371008}
+--- !u!114 &114253880823932090
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1215054185222338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 92b0e732-2cd7-447d-a4bc-3ec2565ee59f
+--- !u!114 &114369996946704102
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1976926299266004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 978504d5-00c3-4a8d-9112-de25d1ce633e
+--- !u!114 &114530379520743986
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1976926299266004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -605777808, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isConnected: 1
+  _guid: 
+  _referenceCollection:
+    _collection:
+    - {fileID: 1976926299266004}
+    - {fileID: 1215054185222338}
+  _assetGuid: cdb35b1e4e9fbdf46b434c997b7fb214

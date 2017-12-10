@@ -20,6 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4443128214025360}
   - component: {fileID: 108386270113720836}
+  - component: {fileID: 114759359192701266}
+  - component: {fileID: 114685607823367788}
   m_Layer: 0
   m_Name: Sun
   m_TagString: Untagged
@@ -76,3 +78,32 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114685607823367788
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1928394785170850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: c6e4fd3d-b110-4f6e-9431-bd85aa4dc7da
+--- !u!114 &114759359192701266
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1928394785170850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -605777808, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isConnected: 1
+  _guid: 
+  _referenceCollection:
+    _collection:
+    - {fileID: 1928394785170850}
+  _assetGuid: 07f19b1831e8e4440ba7a61cec692329

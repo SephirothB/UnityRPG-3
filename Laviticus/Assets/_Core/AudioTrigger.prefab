@@ -20,6 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4264795027947268}
   - component: {fileID: 114210352834631596}
+  - component: {fileID: 114664531783804040}
+  - component: {fileID: 114727993486210736}
   m_Layer: 0
   m_Name: AudioTrigger
   m_TagString: Untagged
@@ -56,3 +58,32 @@ MonoBehaviour:
   triggerRadius: 5
   isOneTimeOnly: 1
   hasPlayed: 0
+--- !u!114 &114664531783804040
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1135053758561696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -605777808, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isConnected: 1
+  _guid: 
+  _referenceCollection:
+    _collection:
+    - {fileID: 1135053758561696}
+  _assetGuid: f32311f5964ceda488c6d3e2288666fc
+--- !u!114 &114727993486210736
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1135053758561696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 68c7176f-2eb6-45b0-a41b-c88b948bc09a

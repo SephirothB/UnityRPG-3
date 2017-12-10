@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4070144230778154}
   - component: {fileID: 33162961415514686}
   - component: {fileID: 23316373056155498}
+  - component: {fileID: 114978080275088570}
   m_Layer: 0
   m_Name: DungeonEntrance
   m_TagString: Untagged
@@ -39,6 +40,8 @@ GameObject:
   - component: {fileID: 65091874062225656}
   - component: {fileID: 65448345306590132}
   - component: {fileID: 65836845482460032}
+  - component: {fileID: 114614779020546014}
+  - component: {fileID: 114314624250101154}
   m_Layer: 0
   m_Name: DungeonEntrance
   m_TagString: Untagged
@@ -153,3 +156,45 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 2.527518, z: 0.99999976}
   m_Center: {x: -1.25, y: 1.2286559, z: -0.23244858}
+--- !u!114 &114314624250101154
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1242068773073854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 2d7ef94b-378a-46d0-8ed1-338229a273e0
+--- !u!114 &114614779020546014
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1242068773073854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -605777808, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isConnected: 1
+  _guid: 
+  _referenceCollection:
+    _collection:
+    - {fileID: 1242068773073854}
+    - {fileID: 1087260065753270}
+  _assetGuid: 565e359ae5e266f48844a285ce6e97bf
+--- !u!114 &114978080275088570
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1087260065753270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 88b5d921-d84e-4ea8-9517-403cebd52042

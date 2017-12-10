@@ -19,6 +19,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4889317575554436}
+  - component: {fileID: 114427712304524734}
+  - component: {fileID: 114585793009402290}
   m_Layer: 0
   m_Name: Street Lamp Straight
   m_TagString: Untagged
@@ -37,6 +39,7 @@ GameObject:
   - component: {fileID: 33020624240538824}
   - component: {fileID: 23407870492872486}
   - component: {fileID: 65201223240705350}
+  - component: {fileID: 114705218992880330}
   m_Layer: 0
   m_Name: Street_Lamp
   m_TagString: Untagged
@@ -126,3 +129,45 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.33258998, y: 1.8062049, z: 0.260542}
   m_Center: {x: -0.006876044, y: 0.9121595, z: 0.002775997}
+--- !u!114 &114427712304524734
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1377262380806518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -605777808, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isConnected: 1
+  _guid: 
+  _referenceCollection:
+    _collection:
+    - {fileID: 1377262380806518}
+    - {fileID: 1846708171827608}
+  _assetGuid: 41e4f11246cf84847a067362b5040267
+--- !u!114 &114585793009402290
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1377262380806518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: b9b07e63-ff1e-4fe4-99ed-510eb4476e23
+--- !u!114 &114705218992880330
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1846708171827608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: c208d303-3d00-4ffc-a5eb-ca09c38bba84

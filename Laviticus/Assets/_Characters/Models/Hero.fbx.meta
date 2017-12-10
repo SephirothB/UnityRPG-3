@@ -3,7 +3,7 @@ guid: df66970bb136a93488cc9847e44efd27
 timeCreated: 1493806006
 licenseType: Free
 ModelImporter:
-  serializedVersion: 19
+  serializedVersion: 22
   fileIDToRecycleName:
     100000: Armature
     100002: Camera
@@ -66,10 +66,39 @@ ModelImporter:
     4300000: Hero
     7400000: Armature|Action
     9500000: //RootNode
+    11400000: Armature
+    11400002: Foot.L
+    11400004: Foot.L_end
+    11400006: Foot.R
+    11400008: Foot.R_end
+    11400010: Hand.L
+    11400012: Hand.L_end
+    11400014: Hand.R
+    11400016: Hand.R_end
+    11400018: Head
+    11400020: Head_end
+    11400022: //RootNode
+    11400024: Hero
+    11400026: //RootNode
+    11400028: Hips
+    11400030: Lower Arm.L
+    11400032: Lower Arm.R
+    11400034: Lower Leg.l
+    11400036: Lower Leg.r
+    11400038: Neck
+    11400040: Shoulder.L
+    11400042: Shoulder.R
+    11400044: Spine
+    11400046: Upper Arm.L
+    11400048: Upper Arm.R
+    11400050: Upper Leg.L
+    11400052: Upper Leg.R
+  externalObjects: {}
   materials:
     importMaterials: 0
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -82,12 +111,14 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
     animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations: []
     isReadable: 1
   meshes:
@@ -95,7 +126,10 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -111,6 +145,7 @@ ModelImporter:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
+    normalCalculationMode: 0
   importAnimation: 0
   copyAvatar: 0
   humanDescription:
