@@ -217,17 +217,17 @@
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Analytics">
-      <HintPath>C:/Users/fozzy/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@1.0.1/UnityEngine.Analytics.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Purchasing">
-      <HintPath>C:/Users/fozzy/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/UnityEngine.Purchasing.dll</HintPath>
-    </Reference>
     <Reference Include="NestedPrefabs">
       <HintPath>Assets/Nested Prefabs/NestedPrefabs.dll</HintPath>
     </Reference>
     <Reference Include="NestedPrefabs_Editor">
       <HintPath>Assets/Nested Prefabs/NestedPrefabs_Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Analytics">
+      <HintPath>C:/Users/fozzy/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@1.0.1/UnityEngine.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing">
+      <HintPath>C:/Users/fozzy/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/UnityEngine.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -254,6 +254,7 @@
     <Compile Include="Assets\_Characters\Player\Special Abilities\Nano Shield\NanoShieldConfig1.cs" />
     <Compile Include="Assets\_Characters\Player\Special Abilities\Power Attack\PowerAttackBehaviour.cs" />
     <Compile Include="Assets\_Characters\Player\Special Abilities\Power Attack\PowerAttackConfig.cs" />
+    <Compile Include="Assets\_Characters\Player\Special Abilities\SpecialAbilityBehaviour.cs" />
     <Compile Include="Assets\_Characters\Player\Special Abilities\SpecialAbilityConfig.cs" />
     <Compile Include="Assets\_Characters\Player\Special Abilities\Tesla Attack\TeslaAttackBehaviour.cs" />
     <Compile Include="Assets\_Characters\Player\Special Abilities\Tesla Attack\TeslaAttackConfig.cs" />

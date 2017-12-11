@@ -26,7 +26,7 @@ namespace RPG.Character
 
         
 
-        AudioSource audio;
+        AudioSource audioPlayer;
         Animator animator;
         AICharacterControl aiCharacterControl = null;
         Player player = null;
@@ -70,13 +70,13 @@ namespace RPG.Character
         {
             print("Enemy Dead");
             
-            audio.clip = deathSounds[UnityEngine.Random.Range(0, deathSounds.Length)];
-            audio.Play();
+            audioPlayer.clip = deathSounds[UnityEngine.Random.Range(0, deathSounds.Length)];
+            audioPlayer.Play();
             Destroy(gameObject);
 
             //animator.SetTrigger(DEATH_ANIM);
 
-            yield return new WaitForSecondsRealtime(audio.clip.length);
+            yield return new WaitForSecondsRealtime(audioPlayer.clip.length);
 
             
             
@@ -84,7 +84,7 @@ namespace RPG.Character
         private void ReduceHealth(float damage)
         {
             currentHealthPoints = Mathf.Clamp(currentHealthPoints - damage, 0f, maxHealthPoints);
-            audio.clip = damageSounds[UnityEngine.Random.Range(0, damageSounds.Length)];
+            audioPlayer.clip = damageSounds[UnityEngine.Random.Range(0, damageSounds.Length)];
             //TODO remove once ready audio.Play();
         }
         // Use this for initialization
@@ -94,7 +94,7 @@ namespace RPG.Character
             player = FindObjectOfType<Player>();
             aiCharacterControl = GetComponent<AICharacterControl>();
             currentHealthPoints = maxHealthPoints;
-            audio = GetComponent<AudioSource>();
+            audioPlayer = GetComponent<AudioSource>();
             //fireFrom = FindGameObjectWithTag("ProjectileSpawnPoint");
 
 

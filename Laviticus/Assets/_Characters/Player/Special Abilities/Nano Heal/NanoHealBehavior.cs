@@ -4,44 +4,29 @@ using UnityEngine;
 
 namespace RPG.Character
 {
-    public class NanoHealBehavior : MonoBehaviour, ISpecialAbility
+    public class NanoHealBehavior : SpecialAbilityBehaviour
     {
-        NanoHealConfig config;
         Player player;
-        AudioSource audioPlayer;
 
 
-        public void Engage(AbilityUseParams useParams)
+
+        public override void Engage(AbilityUseParams useParams)
         {
 
-            player.AddHealth(config.GetHealAmount());
-            audioPlayer.clip = config.GetAudioClip();
-            audioPlayer.Play();
+            player.AddHealth((config as NanoHealConfig).GetHealAmount());
+            PlayAbilitySound();
             PlayParticleEffect();
 
 
         }
 
-        private void PlayParticleEffect()
-        {
 
-            GameObject newParticlePrefab = Instantiate(config.GetParticlePrefab(), transform.position, Quaternion.identity);
-            newParticlePrefab.transform.parent = transform;
-            ParticleSystem newParticle = newParticlePrefab.GetComponent<ParticleSystem>();
-            newParticle.Play();
-            Destroy(newParticlePrefab, newParticle.main.duration);
-
-        }
 
         void Start()
         {
             player = GetComponent<Player>();
-            audioPlayer = GetComponent<AudioSource>();
+
         }
-        // Update is called once per frame
-        public void SetConfig(NanoHealConfig configToSet)
-        {
-            this.config = configToSet;
-        }
+
     }
 }

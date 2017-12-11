@@ -6,44 +6,33 @@ using System;
 
 namespace RPG.Character
 {
-    public class TeslaAttackBehaviour : MonoBehaviour, ISpecialAbility
+    public class TeslaAttackBehaviour : SpecialAbilityBehaviour
     {
-        TeslaAttackConfig config;
+        //TeslaAttackConfig config;
               
 
         int layerMask = 1 << 8;
 
         
-        public void SetConfig(TeslaAttackConfig configToSet)
-        {
-            this.config = configToSet;
-        }
+       
 
-        public void Engage(AbilityUseParams useParams)
+        public override void Engage(AbilityUseParams useParams)
         {
+            PlayAbilitySound();
             DealSpecialAttack(useParams);
             PlayParticleEffect();
 
         }
 
-        private void PlayParticleEffect()
-        {
-           
-
-            GameObject newParticlePrefab = Instantiate(config.GetParticlePrefab(), transform.position, config.GetParticlePrefab().transform.rotation);
-            ParticleSystem newParticle = newParticlePrefab.GetComponent<ParticleSystem>();
-            newParticle.Play();
-            Destroy(newParticlePrefab, newParticle.main.duration);
-            
-        }
+        
 
         private void DealSpecialAttack(AbilityUseParams useParams)
         {
             RaycastHit[] hits = Physics.SphereCastAll(
                 transform.position,
-                config.GetRadius(),
+                (config as TeslaAttackConfig).GetRadius(),
                 Vector3.up,
-                config.GetRadius()
+                (config as TeslaAttackConfig).GetRadius()
                 );
 
 
@@ -53,7 +42,7 @@ namespace RPG.Character
                 bool hitPlayer = hit.collider.gameObject.GetComponent<Player>();
                 if (damageable != null && !hitPlayer)
                 {
-                    float damagetoDeal = useParams.baseDamage + config.GetDamageMulti();
+                    float damagetoDeal = useParams.baseDamage + (config as TeslaAttackConfig).GetDamageMulti();
                     damageable.TakeDamage(damagetoDeal);
                 }
             }

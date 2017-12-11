@@ -6,7 +6,7 @@ using UnityEngine;
 namespace RPG.Character
 {
     [CreateAssetMenu(menuName = ("RPG/Special Ability/Nano Heal"))]
-    public class NanoHealConfig : SpecialAbility
+    public class NanoHealConfig : SpecialAbilityConfig
     {
         [Header("Nano Heal Attributes")]
         //[SerializeField] float energyCostToHealMulti;

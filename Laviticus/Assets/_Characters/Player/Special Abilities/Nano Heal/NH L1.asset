@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Name: NH L1
   m_EditorClassIdentifier: 
   energyCost: 10
-  particlePrefab: {fileID: 1929678046106076, guid: 39a6dc28ae725104d865fdc4fef8016b,
+  particlePrefab: {fileID: 1852861822587388, guid: 7a91b5598ff8d21418c798bd048cdfd8,
     type: 2}
-  abilitySound: {fileID: 8300000, guid: cfc704ba5512dcf4cbd1298eabbbf482, type: 3}
+  abilitySounds:
+  - {fileID: 8300000, guid: 0e48b7a476e68254992a8140153f3a89, type: 3}
+  - {fileID: 8300000, guid: cfc704ba5512dcf4cbd1298eabbbf482, type: 3}
+  - {fileID: 8300000, guid: 47365268290a6634eb06ea4cb2ddc25a, type: 3}
+  - {fileID: 8300000, guid: 15f44200a8f4f724db11f50f1f666af7, type: 3}
   baseAmtToHeal: 100

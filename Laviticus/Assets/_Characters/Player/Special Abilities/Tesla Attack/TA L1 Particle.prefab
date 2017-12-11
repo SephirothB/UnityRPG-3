@@ -143,7 +143,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &114189769758406144
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 11
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1535963497469406}
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 --- !u!114 &114302470447853104
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 11
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1535963497469406}
@@ -166,7 +166,7 @@ MonoBehaviour:
   _guid: 7cbc3b0a-e3f0-494f-9aa7-27fa9302b51c
 --- !u!114 &114337414222221674
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 11
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1535963497469406}
@@ -183,7 +183,7 @@ MonoBehaviour:
   _assetGuid: 0f75f6db4a318f54382e0c98b2226db8
 --- !u!114 &114466728994863444
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 11
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1801480236627548}
@@ -195,7 +195,7 @@ MonoBehaviour:
   _guid: 62d1fec5-30c4-4644-8a35-79e90888ac7d
 --- !u!114 &114827180745377078
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 11
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1891877793455904}
@@ -207,7 +207,7 @@ MonoBehaviour:
   _guid: 78414979-7387-43f9-9bbe-77a711df93cc
 --- !u!114 &114910332077933612
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 11
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1157982844991056}
@@ -227,7 +227,7 @@ MonoBehaviour:
   _assetGuid: eed9d3258aa4d3147b0a93461090f3e3
 --- !u!114 &114945279271691906
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 11
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1157982844991056}
@@ -294,7 +294,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 1455201046
@@ -3638,7 +3638,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: -341395353
@@ -6955,7 +6955,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: -474123227

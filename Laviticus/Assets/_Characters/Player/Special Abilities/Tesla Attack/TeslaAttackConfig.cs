@@ -3,7 +3,7 @@
 namespace RPG.Character
 {
     [CreateAssetMenu(menuName = ("RPG/Special Ability/Tesla Attack"))]
-    public class TeslaAttackConfig : SpecialAbility
+    public class TeslaAttackConfig : SpecialAbilityConfig
     {
 
         [Header("Tesla Attack Specific")]

@@ -5,7 +5,7 @@ using UnityEngine;
 namespace RPG.Character
 {
     [CreateAssetMenu(menuName =("RPG/Special Ability/Power Attack"))]
-    public class PowerAttackConfig : SpecialAbility
+    public class PowerAttackConfig : SpecialAbilityConfig
     {
 
         [Header("Power Attack Specific")]

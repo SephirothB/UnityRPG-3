@@ -22,7 +22,7 @@ namespace RPG.Character
         [SerializeField] Weapon weaponInUse;
         [SerializeField] AnimatorOverrideController animOverrideController;
 
-        [SerializeField] SpecialAbility[] abilities;
+        [SerializeField] SpecialAbilityConfig[] abilities;
         [SerializeField] AudioClip[] damageSounds;
         [SerializeField] AudioClip[] deathSounds;
         [Range(.1f, 1.0f)] [SerializeField] float criticalHitChance = 0.1f;
