@@ -7,13 +7,13 @@ using RPG.CameraUI;
 namespace RPG.Character
 {
     [RequireComponent(typeof(NavMeshAgent))]
-    [RequireComponent(typeof(AICharacterControl))]
+
     [RequireComponent(typeof(ThirdPersonCharacter))]
     public class PlayerMovement : MonoBehaviour
     {
 
         CameraRaycaster cameraRaycaster;
-        AICharacterControl aiCharControl = null;
+
         GameObject walkTarget = null;
 
         //Vector3 currentClickTarget;
@@ -27,7 +27,7 @@ namespace RPG.Character
         {
 
             cameraRaycaster = Camera.main.GetComponent<CameraRaycaster>();
-            aiCharControl = GetComponent<AICharacterControl>();
+
             cameraRaycaster.SendDestinationVector += SetDestinationVector;
             cameraRaycaster.onMouseOverEnemy += OnMouseOverEnemy;
             walkTarget = new GameObject("walkTarget");
@@ -38,7 +38,7 @@ namespace RPG.Character
             if (Input.GetMouseButton(0))
             {
                 walkTarget.transform.position = destination;
-                aiCharControl.SetTarget(walkTarget.transform);
+                //aiCharControl.SetTarget(walkTarget.transform);
             }
         }
 
@@ -48,7 +48,7 @@ namespace RPG.Character
 
             if (Input.GetMouseButton(0) || Input.GetMouseButtonDown(1))
             {
-                aiCharControl.SetTarget(enemy.transform);
+                //aiCharControl.SetTarget(enemy.transform);
             }
 
         }

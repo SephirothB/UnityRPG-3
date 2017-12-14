@@ -277,6 +277,12 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
+    <Reference Include="NestedPrefabs">
+      <HintPath>Assets/Nested Prefabs/NestedPrefabs.dll</HintPath>
+    </Reference>
+    <Reference Include="NestedPrefabs_Editor">
+      <HintPath>Assets/Nested Prefabs/NestedPrefabs_Editor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.Advertisements">
       <HintPath>C:/Users/fozzy/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@1.0.7/Editor/UnityEditor.Advertisements.dll</HintPath>
     </Reference>
@@ -291,12 +297,6 @@
     </Reference>
     <Reference Include="UnityEditor.Purchasing">
       <HintPath>C:/Users/fozzy/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/Editor/UnityEditor.Purchasing.dll</HintPath>
-    </Reference>
-    <Reference Include="NestedPrefabs">
-      <HintPath>Assets/Nested Prefabs/NestedPrefabs.dll</HintPath>
-    </Reference>
-    <Reference Include="NestedPrefabs_Editor">
-      <HintPath>Assets/Nested Prefabs/NestedPrefabs_Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -323,8 +323,8 @@
     <None Include="Assets\Audio\eight Bit Retro Rampage Free\Readme.txt" />
     <None Include="Assets\Nested Prefabs\readme.txt" />
     <None Include="Assets\SETUP &amp; STANDARDS.txt" />
+    <None Include="Assets\_Characters\Weapons\Ranged Weapons\Ball Gun\RollerBall\RollerBallGuidelines.txt" />
     <None Include="Assets\_Environment\Water\Water\Shaders\FXWaterPro.shader" />
-    <None Include="Assets\_Weapons\Ranged Weapons\Ball Gun\RollerBall\RollerBallGuidelines.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

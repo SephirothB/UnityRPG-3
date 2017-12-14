@@ -5,7 +5,7 @@ using UnityEngine;
 using RPG.Character;
 
 
-namespace RPG.Weapons
+namespace RPG.Character
 {
     [ExecuteInEditMode]
     public class WeaponPickup : MonoBehaviour

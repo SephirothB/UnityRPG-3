@@ -5,9 +5,8 @@ using UnityEngine.Assertions;
 
 //TODO Consider rewiring
 using RPG.CameraUI;
-using RPG.Weapons;
 using RPG.Core;
-using System;
+
 using System.Collections;
 
 namespace RPG.Character
@@ -15,22 +14,26 @@ namespace RPG.Character
     [RequireComponent(typeof(AudioSource))]
     public class Player : MonoBehaviour, IDamagable
     {
+        [SerializeField] SpecialAbilityConfig[] abilities;
+        [SerializeField] AudioClip[] damageSounds;
+        [SerializeField] AudioClip[] deathSounds;
 
         [SerializeField] float maxHealthPoints = 100f;
         [SerializeField] float baseDamage = 10f;
 
         [SerializeField] Weapon currentWeaponConfig;
+
         [SerializeField] AnimatorOverrideController animOverrideController;
 
-        [SerializeField] SpecialAbilityConfig[] abilities;
-        [SerializeField] AudioClip[] damageSounds;
-        [SerializeField] AudioClip[] deathSounds;
+        
+        
         [Range(.1f, 1.0f)] [SerializeField] float criticalHitChance = 0.1f;
         [SerializeField] float criticalHitMultiplier = 1.25f;
         [SerializeField] ParticleSystem criticalHitParticleSystem;
 
         const string DEATH_ANIM = "Death";
         const string ATTACK_ANIM = "Attack";
+        const string DEFAULT_ATTACK = "Default attack";
 
         AudioSource audio;
         Animator animator;
@@ -126,7 +129,7 @@ namespace RPG.Character
             RegisterForMouseClick();
             SetCurrentMaxHealth();
             PickUpWeapon(currentWeaponConfig);
-            SetupRuntimeAnimator();
+            SetAttackAnimation();
             AttachInitialAbilities();
             
         }
@@ -182,11 +185,11 @@ namespace RPG.Character
 
 
 
-        void SetupRuntimeAnimator()
+        void SetAttackAnimation()
         {
             animator = GetComponent<Animator>();
             animator.runtimeAnimatorController = animOverrideController;
-            animOverrideController["Default attack"] = currentWeaponConfig.GetAttackAnimClip(); //Remove Constant
+            animOverrideController[DEFAULT_ATTACK] = currentWeaponConfig.GetAttackAnimClip(); //Remove Constant
         }
 
        
@@ -217,6 +220,7 @@ namespace RPG.Character
 
            if (Time.time - lastHitTime > currentWeaponConfig.GetMinTimeBetweenHits())
             {
+                SetAttackAnimation();
                 animator.SetTrigger(ATTACK_ANIM);
                 target.TakeDamage(CalculateDamage());
                 lastHitTime = Time.time;

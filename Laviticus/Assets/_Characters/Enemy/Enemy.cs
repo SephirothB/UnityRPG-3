@@ -1,8 +1,5 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
-using RPG.Weapons;
 using RPG.Core;
 
 namespace RPG.Character
@@ -28,7 +25,6 @@ namespace RPG.Character
 
         AudioSource audioPlayer;
         Animator animator;
-        AICharacterControl aiCharacterControl = null;
         Player player = null;
         GameObject fireFrom;
 
@@ -92,7 +88,7 @@ namespace RPG.Character
         {
 
             player = FindObjectOfType<Player>();
-            aiCharacterControl = GetComponent<AICharacterControl>();
+
             currentHealthPoints = maxHealthPoints;
             audioPlayer = GetComponent<AudioSource>();
             //fireFrom = FindGameObjectWithTag("ProjectileSpawnPoint");
@@ -112,11 +108,11 @@ namespace RPG.Character
             float distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);
             if (distanceToPlayer <= moveToAttackRadius)
             {
-                aiCharacterControl.SetTarget(player.transform);
+               // aiCharacterControl.SetTarget(player.transform);
             }
             else
             {
-                aiCharacterControl.SetTarget(transform);
+               // aiCharacterControl.SetTarget(transform);
             }
             if (distanceToPlayer <= attackRadius && !isAttacking)
             {

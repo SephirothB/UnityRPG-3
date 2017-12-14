@@ -5,7 +5,7 @@ using UnityEngine;
 using RPG.Core;
 
 
-namespace RPG.Weapons
+namespace RPG.Character
 {
     public class Projectile : MonoBehaviour
     {
