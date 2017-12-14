@@ -12,14 +12,9 @@ namespace RPG.Character
         //[SerializeField] float energyCostToHealMulti;
         [SerializeField] float baseAmtToHeal;
 
-        public override void AttachComponent(GameObject engagingObject)
+        public override SpecialAbilityBehaviour GetBehaviourComponent(GameObject objectToAttachTo)
         {
-
-            var behaviourComponent = engagingObject.AddComponent<NanoHealBehavior>();
-            behaviourComponent.SetConfig(this);
-            behaviour = behaviourComponent;
-           
-
+            return objectToAttachTo.AddComponent<NanoHealBehavior>();
         }
 
 

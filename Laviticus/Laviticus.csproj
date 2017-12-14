@@ -273,6 +273,7 @@
     <Compile Include="Assets\_Weapons\Ranged Weapons\Ball Gun\RollerBall\Scripts\Ball.cs" />
     <Compile Include="Assets\_Weapons\Ranged Weapons\Projectile.cs" />
     <Compile Include="Assets\_Weapons\Weapon.cs" />
+    <Compile Include="Assets\_Weapons\WeaponPickup.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Asset Packs - For Students\SimpleFX - Synty\Materials\UnlitVertexColour_Alpha.shader" />

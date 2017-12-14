@@ -19,7 +19,7 @@ namespace RPG.Character
         [SerializeField] float maxHealthPoints = 100f;
         [SerializeField] float baseDamage = 10f;
 
-        [SerializeField] Weapon weaponInUse;
+        [SerializeField] Weapon currentWeaponConfig;
         [SerializeField] AnimatorOverrideController animOverrideController;
 
         [SerializeField] SpecialAbilityConfig[] abilities;
@@ -36,6 +36,7 @@ namespace RPG.Character
         Animator animator;
         PowerAttackConfig config;
         Enemy currentTarget;
+        GameObject weaponObject;
         
 
         private float currentHealthPoints = 100f;
@@ -88,6 +89,19 @@ namespace RPG.Character
             currentHealthPoints = Mathf.Clamp(currentHealthPoints + healAmount, 0f, maxHealthPoints);
         }
 
+        public void PickUpWeapon(Weapon weaponToUse)
+        {
+            currentWeaponConfig = weaponToUse;
+            var weaponPrefab = weaponToUse.GetWeaponPrefab();
+            GameObject weaponSocket = RequestDominantHand();
+            Destroy(weaponObject);
+
+            weaponObject = Instantiate(weaponPrefab, weaponSocket.transform); //TODO Move to hand
+
+            weaponObject.transform.localPosition = currentWeaponConfig.gripTransform.localPosition;
+            weaponObject.transform.localRotation = currentWeaponConfig.gripTransform.localRotation;
+        }
+
         IEnumerator KillPlayer()
         {
             animator.SetTrigger(DEATH_ANIM);
@@ -111,7 +125,7 @@ namespace RPG.Character
             audio = GetComponent<AudioSource>();
             RegisterForMouseClick();
             SetCurrentMaxHealth();
-            RegisterWeaponInUse();
+            PickUpWeapon(currentWeaponConfig);
             SetupRuntimeAnimator();
             AttachInitialAbilities();
             
@@ -121,7 +135,7 @@ namespace RPG.Character
         {
             for (int abilityIndex = 0; abilityIndex < abilities.Length; abilityIndex++)
             {
-                abilities[abilityIndex].AttachComponent(gameObject);
+                abilities[abilityIndex].AttachAbility(gameObject);
             }
             
         }
@@ -166,23 +180,13 @@ namespace RPG.Character
             currentHealthPoints = maxHealthPoints;
         }
 
-        void RegisterWeaponInUse()
-        {
 
-            var weaponPrefab = weaponInUse.GetWeaponPrefab();
-            GameObject weaponSocket = RequestDominantHand();
-            var weapon = Instantiate(weaponPrefab, weaponSocket.transform); //TODO Move to hand
-
-            weapon.transform.localPosition = weaponInUse.gripTransform.localPosition;
-            weapon.transform.localRotation = weaponInUse.gripTransform.localRotation;
-
-        }
 
         void SetupRuntimeAnimator()
         {
             animator = GetComponent<Animator>();
             animator.runtimeAnimatorController = animOverrideController;
-            animOverrideController["Default attack"] = weaponInUse.GetAttackAnimClip(); //Remove Constant
+            animOverrideController["Default attack"] = currentWeaponConfig.GetAttackAnimClip(); //Remove Constant
         }
 
        
@@ -204,14 +208,14 @@ namespace RPG.Character
         private bool IsEnemyInRange(Enemy target)
         {
             float distanceToTarget = (target.transform.position - transform.position).magnitude;
-            return distanceToTarget <= weaponInUse.GetMaxAttackRange();    
+            return distanceToTarget <= currentWeaponConfig.GetMaxAttackRange();    
         }
 
 
         private void AttackTarget(Enemy target)
         {
 
-           if (Time.time - lastHitTime > weaponInUse.GetMinTimeBetweenHits())
+           if (Time.time - lastHitTime > currentWeaponConfig.GetMinTimeBetweenHits())
             {
                 animator.SetTrigger(ATTACK_ANIM);
                 target.TakeDamage(CalculateDamage());
@@ -222,7 +226,7 @@ namespace RPG.Character
         private float CalculateDamage()
         {
             bool isCriticalHit = UnityEngine.Random.Range(0f, 1f) <= criticalHitChance;
-            float damageBeforeCritical = baseDamage + weaponInUse.GetAdditionalDamage();
+            float damageBeforeCritical = baseDamage + currentWeaponConfig.GetAdditionalDamage();
             if (isCriticalHit)
             {
                 criticalHitParticleSystem.Play();
@@ -234,9 +238,7 @@ namespace RPG.Character
             }
         }
 
-        //Energy code below
-       
-        // Update is called once per frame
+
         void Update()
         {
             if (HealthAsPercentage > Mathf.Epsilon)
@@ -256,19 +258,7 @@ namespace RPG.Character
                     AttemptSpecialAbility(keyIndex);
                 }
             }
-            //if (Input.GetKeyDown("1"))
-            //{
 
-            //    AttemptSpecialAbility(0);
-            //}
-            //if (Input.GetKeyDown("1"))
-            //{
-            //    AttemptSpecialAbility(1);
-            //}
-            //if (Input.GetKeyDown("1"))
-            //{
-            //    AttemptSpecialAbility(2);
-            //}
         }
     }
 }

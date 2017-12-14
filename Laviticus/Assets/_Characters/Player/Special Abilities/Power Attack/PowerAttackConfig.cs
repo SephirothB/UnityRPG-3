@@ -11,12 +11,12 @@ namespace RPG.Character
         [Header("Power Attack Specific")]
         [SerializeField] float damageMultiplier = 1f;
         // Use this for initialization
-        public override void AttachComponent(GameObject objectEngaging)
+
+        public override SpecialAbilityBehaviour GetBehaviourComponent(GameObject objectToAttachTo)
         {
-            var behaviourComponent = objectEngaging.AddComponent<PowerAttackBehaviour>();
-            behaviourComponent.SetConfig(this);
-            behaviour = behaviourComponent;
+            return objectToAttachTo.AddComponent<PowerAttackBehaviour>(); 
         }
+
 
         public float GetDamageMulti()
         {

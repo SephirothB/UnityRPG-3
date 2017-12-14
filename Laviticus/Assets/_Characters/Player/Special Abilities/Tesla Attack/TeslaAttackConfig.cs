@@ -9,12 +9,11 @@ namespace RPG.Character
         [Header("Tesla Attack Specific")]
         [SerializeField] float attackRadius = 3.14f; 
         [SerializeField] float damageToEachTarget = 1f;
-        // Use this for initialization
-        public override void AttachComponent(GameObject objectEngaging)
+
+
+        public override SpecialAbilityBehaviour GetBehaviourComponent(GameObject objectToAttachTo)
         {
-            var behaviourComponent = objectEngaging.AddComponent<TeslaAttackBehaviour>();
-            behaviourComponent.SetConfig(this);
-            behaviour = behaviourComponent;
+            return objectToAttachTo.AddComponent<TeslaAttackBehaviour>();
         }
 
         public float GetDamageMulti()

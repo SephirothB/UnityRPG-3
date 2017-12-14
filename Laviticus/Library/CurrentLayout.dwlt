@@ -107,10 +107,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 957
-  m_MinSize: {x: 709, y: 492}
-  m_MaxSize: {x: 18004, y: 14042}
+  m_MinSize: {x: 713, y: 492}
+  m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 132
+  controlID: 104
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 80
+  controlID: 12
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -208,8 +208,8 @@ MonoBehaviour:
     y: 0
     width: 243
     height: 957
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 204, y: 221}
+  m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -474,9 +474,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 23.674858, y: 8.142201, z: -113.41113}
+    m_Target: {x: 21.859848, y: 7.975914, z: -116.92069}
     speed: 2
-    m_Value: {x: 23.674858, y: 8.142201, z: -113.41113}
+    m_Value: {x: 21.859848, y: 7.975914, z: -116.92069}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -499,9 +499,9 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.005765953, y: 0.9890074, z: -0.14220954, w: 0.040095564}
+    m_Target: {x: -0.0012232232, y: 0.9974433, z: -0.06924508, w: -0.01762293}
     speed: 2
-    m_Value: {x: 0.005765953, y: 0.9890074, z: -0.14220954, w: 0.040095564}
+    m_Value: {x: -0.0012232232, y: 0.9974433, z: -0.06924508, w: -0.01762293}
   m_Size:
     m_Target: 22
     speed: 2
@@ -555,19 +555,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/_Characters/Player/Special Abilities/Nano Heal
+    - Assets/_Weapons/Rod
   m_ViewMode: 1
   m_StartGridSize: 81
   m_LastFolders:
-  - Assets/_Characters/Player/Special Abilities/Nano Heal
+  - Assets/_Weapons/Rod
   m_LastFoldersGridSize: 81
   m_LastProjectPath: D:\Development\Unity\RPG\UnityRPG\Laviticus
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 78510000
-    m_LastClickedID: 20856
-    m_ExpandedIDs: 00000000f62900006a2a0000942a0000ec2c0000c034000076350000b4390000ea3a00009645000038470000ca5300003c6d00003e6d0000406d0000426d0000446d0000466d0000486d00004a6d00004c6d00004e6d0000506d0000526d0000546d0000566d0000586d00005a6d00005c6d0000ffffff7f
+    scrollPos: {x: 0, y: 89}
+    m_SelectedIDs: 863d0000
+    m_LastClickedID: 15750
+    m_ExpandedIDs: 00000000f62900006a2a0000942a0000ec2c000072350000e83a000050440000984500003e470000c8530000406d0000426d0000446d0000466d0000486d00004a6d00004c6d00004e6d0000506d0000526d0000546d0000566d0000586d00005a6d00005c6d00005e6d0000606d0000626d0000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -595,7 +595,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000f62900006a2a0000ec2c0000702f0000fc34000076350000b4390000ea3a0000fc41000096450000384700003c6d00003e6d0000406d0000426d0000446d0000466d0000486d00004a6d00004c6d00004e6d0000506d0000526d0000546d0000566d0000586d00005a6d00005c6d0000
+    m_ExpandedIDs: 00000000f62900006a2a0000942a0000ec2c000072350000b2390000e83a0000984500003e470000c8530000406d0000426d0000446d0000466d0000486d00004a6d00004c6d00004e6d0000506d0000526d0000546d0000566d0000586d00005a6d00005c6d00005e6d0000606d0000626d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -704,9 +704,9 @@ MonoBehaviour:
     height: 936
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 14490000fe420000fc290000
-    m_LastClickedID: 0
-    m_ExpandedIDs: 7ae5ffff9efbffff0000000070580000b8580000a85900001c5a0000
+    m_SelectedIDs: b60bfdff
+    m_LastClickedID: -193610
+    m_ExpandedIDs: 88ebffff8aebffff8cebffff8eebffffb0ebffffb2ebffffb4ebffffbaebffffc0ebfffff0ebffff9efbffff0000000074580000ba580000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
