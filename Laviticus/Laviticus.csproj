@@ -243,10 +243,10 @@
     <Compile Include="Assets\_Characters\Enemy\Enemy.cs" />
     <Compile Include="Assets\_Characters\Enemy\EnemyHealthBar.cs" />
     <Compile Include="Assets\_Characters\Enemy\EnemyUI.cs" />
+    <Compile Include="Assets\_Characters\Player\CharacterMovement.cs" />
     <Compile Include="Assets\_Characters\Player\Energy.cs" />
     <Compile Include="Assets\_Characters\Player\Player.cs" />
     <Compile Include="Assets\_Characters\Player\PlayerHealthBar.cs" />
-    <Compile Include="Assets\_Characters\Player\PlayerMovement.cs" />
     <Compile Include="Assets\_Characters\Player\Special Abilities\Nano Heal\NanoHealBehavior.cs" />
     <Compile Include="Assets\_Characters\Player\Special Abilities\Nano Heal\NanoHealConfig.cs" />
     <Compile Include="Assets\_Characters\Player\Special Abilities\Nano Shield\NanoShieldBehavior1.cs" />
