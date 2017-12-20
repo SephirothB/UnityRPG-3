@@ -5,18 +5,18 @@ using UnityEngine.UI;
 
 namespace RPG.Character
 {
-    //[RequireComponent(typeof(RawImage))]
-    public class Energy : MonoBehaviour
+
+    public class SpecialAbilities : MonoBehaviour
     {
-        [SerializeField] const int walkableLayerNumber = 8;
+        [SerializeField] SpecialAbilityConfig[] abilities;
         [SerializeField] float maxEnergyPoints = 100f;
         [SerializeField] Image energyImage;
         [SerializeField] float energyRegenPerSecond = 1f;
 
-        Player player;
         
-        float lastHitTime = 0f;
         float currentEnergyPoints;
+
+        AudioSource audioSource;
 
         public float EnergyAsPercentage
         {
@@ -34,10 +34,6 @@ namespace RPG.Character
             UpdateEnergyBar();
         }
         
-        public bool IsEnergyAvailable(float amount)
-        {
-            return amount <= currentEnergyPoints;
-        }
         public void UpdateEnergyBar()
         {
             energyImage.fillAmount = EnergyAsPercentage;
@@ -52,8 +48,11 @@ namespace RPG.Character
         // Use this for initialization
         void Start()
         {
-
+            audioSource = GetComponent<AudioSource>();
             currentEnergyPoints = maxEnergyPoints;
+            AttachInitialAbilities();
+            UpdateEnergyBar();
+
         }
 
         // Update is called once per frame
@@ -65,6 +64,33 @@ namespace RPG.Character
                 UpdateEnergyBar();
             }
         }
-        
+
+        public int GetNumberOfAbilities()
+        {
+            return abilities.Length;
+        }
+        void AttachInitialAbilities()
+        {
+            for (int abilityIndex = 0; abilityIndex < abilities.Length; abilityIndex++)
+            {
+                abilities[abilityIndex].AttachAbility(gameObject);
+            }
+
+        }
+        public void AttemptSpecialAbility(int abilityIndex)
+        {
+
+            
+            var energyCost = abilities[abilityIndex].GetEnergyCost();
+            if (energyCost <= currentEnergyPoints)
+            {
+                ConsumeEnergy(energyCost);
+
+            }
+            else
+            {
+                //todo play out of energy sound
+            }
+        }
     }
 }

@@ -7,7 +7,7 @@ namespace RPG.Character
     public class Enemy : MonoBehaviour, IDamagable
     {
 
-        [SerializeField] float maxHealthPoints = 100f;
+
         [SerializeField] float damagePerShot = 1f;
         [SerializeField] float attackRadius = 4f;
         [SerializeField] float firingPeriodSeconds = 0.5f;
@@ -17,94 +17,31 @@ namespace RPG.Character
         [SerializeField] GameObject projectileSocket;
         [SerializeField] AnimatorOverrideController animOverrideController;
         [SerializeField] Vector3 verticalAimOffset = new Vector3(0, 1f, 0);
-        [SerializeField] AudioClip[] damageSounds;
-        [SerializeField] AudioClip[] deathSounds;
-        private float currentHealthPoints;
-
-        
 
         AudioSource audioPlayer;
         Animator animator;
         Player player = null;
         GameObject fireFrom;
 
-        const string DEATH_ANIM = "Death";
         const string ATACK_ANIM = "Attack";
         
         bool isAttacking = false;
-        
-
-        public float HealthAsPercentage
-        {
-            get
-            {
-                return currentHealthPoints / (float)maxHealthPoints;
-            }
-        }
+      
 
         public void TakeDamage(float damage)
         {
-            bool enemyIsDead = (currentHealthPoints - damage <= 0);
-            ReduceHealth(damage);
-            if (enemyIsDead)
-            {
-
-
-                StartCoroutine(KillEnemy());
-                //Play death sound
-
-                //Trigger death animation
-
-                //Reload the scene
-
-                //TODO remove to allow death and implement reload funtionality //if (currentHealthPoints <= 0) { Destroy(gameObject); }
-            }
 
         }
-
-        IEnumerator KillEnemy()
-        {
-            print("Enemy Dead");
-            
-            audioPlayer.clip = deathSounds[UnityEngine.Random.Range(0, deathSounds.Length)];
-            audioPlayer.Play();
-            Destroy(gameObject);
-
-            //animator.SetTrigger(DEATH_ANIM);
-
-            yield return new WaitForSecondsRealtime(audioPlayer.clip.length);
-
-            
-            
-        }
-        private void ReduceHealth(float damage)
-        {
-            currentHealthPoints = Mathf.Clamp(currentHealthPoints - damage, 0f, maxHealthPoints);
-            audioPlayer.clip = damageSounds[UnityEngine.Random.Range(0, damageSounds.Length)];
-            //TODO remove once ready audio.Play();
-        }
-        // Use this for initialization
         void Start()
         {
-
             player = FindObjectOfType<Player>();
 
-            currentHealthPoints = maxHealthPoints;
             audioPlayer = GetComponent<AudioSource>();
-            //fireFrom = FindGameObjectWithTag("ProjectileSpawnPoint");
-
-
         }
 
-        // Update is called once per frame
         void Update()
         {
 
-            if (player.HealthAsPercentage <= Mathf.Epsilon)
-            {
-                StopAllCoroutines();
-                Destroy(this);
-            }
             float distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);
             if (distanceToPlayer <= moveToAttackRadius)
             {
@@ -148,13 +85,5 @@ namespace RPG.Character
 
         }
 
-        //void OnDrawGizmos()
-        //{
-        //    Gizmos.color = Color.red;
-        //    Gizmos.DrawWireSphere(transform.position, attackRadius);
-
-        //    Gizmos.color = Color.blue;
-        //    Gizmos.DrawWireSphere(transform.position, moveToAttackRadius);
-        //}
     }
 }
