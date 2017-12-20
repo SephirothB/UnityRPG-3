@@ -6,22 +6,12 @@ using RPG.Core;
 
 namespace RPG.Character
 {
-    public struct AbilityUseParams
-    {
-        public IDamagable target;
-        public float baseDamage;
 
-        public AbilityUseParams(IDamagable SATarget, float SABaseDamage)
-        {
-            this.target = SATarget;
-            this.baseDamage = SABaseDamage;
-
-        }
-    }
     public abstract class SpecialAbilityConfig : ScriptableObject
     {
         [Header("Special Ability General")]
-        [SerializeField] float energyCost = 10f;
+        [SerializeField]
+        float energyCost = 10f;
         [SerializeField] GameObject particlePrefab;
         [SerializeField] AudioClip[] abilitySounds;
 
@@ -36,9 +26,9 @@ namespace RPG.Character
             behaviour = behaviourComponent;
         }
 
-        public void Engage(AbilityUseParams useParams)
+        public void Engage(GameObject target)
         {
-            behaviour.Engage(useParams);
+            behaviour.Engage(target);
         }
 
         public float GetEnergyCost()
@@ -55,7 +45,7 @@ namespace RPG.Character
         {
             return abilitySounds[Random.Range(0, abilitySounds.Length)];
         }
-        
+
     }
 
 }

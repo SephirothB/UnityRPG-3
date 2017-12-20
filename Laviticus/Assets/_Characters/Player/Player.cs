@@ -31,7 +31,7 @@ namespace RPG.Character
         Enemy currentTarget;
         GameObject weaponObject;
         SpecialAbilities abilities;
-        
+
         float lastHitTime = 0f;
         CameraRaycaster cameraRaycaster;
 
@@ -56,7 +56,7 @@ namespace RPG.Character
             RegisterForMouseClick();
             PickUpWeapon(currentWeaponConfig);
             SetAttackAnimation();
-            
+
         }
 
         void RegisterForMouseClick()
@@ -91,7 +91,7 @@ namespace RPG.Character
             animOverrideController[DEFAULT_ATTACK] = currentWeaponConfig.GetAttackAnimClip(); //Remove Constant
         }
 
-       
+
 
         private GameObject RequestDominantHand()
         {
@@ -104,20 +104,20 @@ namespace RPG.Character
 
         }
 
-        
+
 
 
         private bool IsEnemyInRange(Enemy target)
         {
             float distanceToTarget = (target.transform.position - transform.position).magnitude;
-            return distanceToTarget <= currentWeaponConfig.GetMaxAttackRange();    
+            return distanceToTarget <= currentWeaponConfig.GetMaxAttackRange();
         }
 
 
         private void AttackTarget(Enemy target)
         {
 
-           if (Time.time - lastHitTime > currentWeaponConfig.GetMinTimeBetweenHits())
+            if (Time.time - lastHitTime > currentWeaponConfig.GetMinTimeBetweenHits())
             {
                 SetAttackAnimation();
                 animator.SetTrigger(ATTACK_ANIM);

@@ -4,7 +4,7 @@ using RPG.Core;
 
 namespace RPG.Character
 {
-    public class Enemy : MonoBehaviour, IDamagable
+    public class Enemy : MonoBehaviour
     {
 
 

@@ -37,7 +37,7 @@ namespace RPG.Character
             var layerCollidedWith = collision.gameObject.layer;
             if (projectileFirer && layerCollidedWith != projectileFirer.layer)
             {
-                DealDamage(collision);
+                //DealDamage(collision);
 
             }
 
@@ -45,16 +45,16 @@ namespace RPG.Character
 
         }
 
-        private void DealDamage(Collision collision)
-        {
-            Component damagableComponent = collision.gameObject.GetComponent(typeof(IDamagable));
-            if (damagableComponent)
-            {
-                (damagableComponent as IDamagable).TakeDamage(damageCaused);
+        //private void DealDamage(Collision collision)
+        //{
+        //    Component damagableComponent = collision.gameObject.GetComponent(typeof(IDamagable));
+        //    if (damagableComponent)
+        //    {
+        //        (damagableComponent as IDamagable).TakeDamage(damageCaused);
 
-            }
+        //    }
 
-            Destroy(gameObject, destroyDelay);
-        }
+        //    Destroy(gameObject, destroyDelay);
+        //}
     }
 }

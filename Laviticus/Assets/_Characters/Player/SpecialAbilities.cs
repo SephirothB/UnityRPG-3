@@ -13,7 +13,7 @@ namespace RPG.Character
         [SerializeField] Image energyImage;
         [SerializeField] float energyRegenPerSecond = 1f;
 
-        
+
         float currentEnergyPoints;
 
         AudioSource audioSource;
@@ -33,7 +33,7 @@ namespace RPG.Character
             currentEnergyPoints = Mathf.Clamp(newEnergyPoints, 0, maxEnergyPoints);
             UpdateEnergyBar();
         }
-        
+
         public void UpdateEnergyBar()
         {
             energyImage.fillAmount = EnergyAsPercentage;
@@ -80,7 +80,7 @@ namespace RPG.Character
         public void AttemptSpecialAbility(int abilityIndex)
         {
 
-            
+
             var energyCost = abilities[abilityIndex].GetEnergyCost();
             if (energyCost <= currentEnergyPoints)
             {

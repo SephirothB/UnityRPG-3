@@ -11,7 +11,7 @@ namespace RPG.Character
 
         const float PARTICLE_CLEAN_UP_DELAY = 20f;
 
-        public abstract void Engage(AbilityUseParams useParams);
+        public abstract void Engage(GameObject target);
 
         public void SetConfig(SpecialAbilityConfig configToSet)
         {
@@ -21,8 +21,8 @@ namespace RPG.Character
         protected void PlayParticleEffect()
         {
             GameObject newParticlePrefab = Instantiate(
-                config.GetParticlePrefab(), 
-                transform.position, 
+                config.GetParticlePrefab(),
+                transform.position,
                 config.GetParticlePrefab().transform.rotation);
 
             newParticlePrefab.transform.parent = transform;
@@ -52,5 +52,5 @@ namespace RPG.Character
         }
     }
 
-    
+
 }

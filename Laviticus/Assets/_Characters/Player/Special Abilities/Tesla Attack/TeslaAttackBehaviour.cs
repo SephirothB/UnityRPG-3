@@ -9,24 +9,24 @@ namespace RPG.Character
     public class TeslaAttackBehaviour : SpecialAbilityBehaviour
     {
         //TeslaAttackConfig config;
-              
+
 
         int layerMask = 1 << 8;
 
-        
-       
 
-        public override void Engage(AbilityUseParams useParams)
+
+
+        public override void Engage(GameObject target)
         {
             PlayAbilitySound();
-            DealSpecialAttack(useParams);
+            DealSpecialAttack(target);
             PlayParticleEffect();
 
         }
 
-        
 
-        private void DealSpecialAttack(AbilityUseParams useParams)
+
+        private void DealSpecialAttack(GameObject target)
         {
             RaycastHit[] hits = Physics.SphereCastAll(
                 transform.position,
@@ -38,12 +38,11 @@ namespace RPG.Character
 
             foreach (RaycastHit hit in hits)
             {
-                var damageable = hit.collider.gameObject.GetComponent<IDamagable>();
                 bool hitPlayer = hit.collider.gameObject.GetComponent<Player>();
-                if (damageable != null && !hitPlayer)
+                if (target != null && !hitPlayer)
                 {
-                    float damagetoDeal = useParams.baseDamage + (config as TeslaAttackConfig).GetDamageMulti();
-                    damageable.TakeDamage(damagetoDeal);
+                    float damagetoDeal = (config as TeslaAttackConfig).GetDamageMulti();
+                    target.GetComponent<HealthSystem>().TakeDamage(damagetoDeal);
                 }
             }
         }

@@ -10,7 +10,7 @@ namespace RPG.Character
 
 
 
-        public override void Engage(AbilityUseParams useParams)
+        public override void Engage(GameObject target)
         {
             var playerHealth = GetComponent<HealthSystem>();
             playerHealth.AddHealth((config as NanoHealConfig).GetHealAmount());
