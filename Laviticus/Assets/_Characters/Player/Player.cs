@@ -11,7 +11,7 @@ using System.Collections;
 
 namespace RPG.Character
 {
-    [RequireComponent(typeof(AudioSource))]
+    //[RequireComponent(typeof(AudioSource))]
     public class Player : MonoBehaviour
     {
 
@@ -81,7 +81,19 @@ namespace RPG.Character
             }
         }
 
+        private void ScanForAbilityKeyDown()
+        {
 
+            for (int keyIndex = 1; keyIndex < abilities.GetNumberOfAbilities(); keyIndex++)
+            {
+                if (Input.GetKeyDown(keyIndex.ToString()))
+                {
+
+                    abilities.AttemptSpecialAbility(keyIndex);
+                }
+            }
+
+        }
 
 
         void SetAttackAnimation()
@@ -150,18 +162,6 @@ namespace RPG.Character
             }
         }
 
-        private void ScanForAbilityKeyDown()
-        {
-
-            for (int keyIndex = 1; keyIndex < abilities.GetNumberOfAbilities(); keyIndex++)
-            {
-                if (Input.GetKeyDown(keyIndex.ToString()))
-                {
-
-                    abilities.AttemptSpecialAbility(keyIndex);
-                }
-            }
-
-        }
+        
     }
 }

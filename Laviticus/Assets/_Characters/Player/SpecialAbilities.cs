@@ -12,7 +12,7 @@ namespace RPG.Character
         [SerializeField] float maxEnergyPoints = 100f;
         [SerializeField] Image energyImage;
         [SerializeField] float energyRegenPerSecond = 1f;
-
+        [SerializeField] AudioClip outOfEnergy;
 
         float currentEnergyPoints;
 
@@ -77,7 +77,7 @@ namespace RPG.Character
             }
 
         }
-        public void AttemptSpecialAbility(int abilityIndex)
+        public void AttemptSpecialAbility(int abilityIndex, GameObject target = null)
         {
 
 
@@ -85,11 +85,13 @@ namespace RPG.Character
             if (energyCost <= currentEnergyPoints)
             {
                 ConsumeEnergy(energyCost);
+                abilities[abilityIndex].Engage(target);
 
             }
             else
             {
-                //todo play out of energy sound
+                audioSource.PlayOneShot(outOfEnergy);
+
             }
         }
     }

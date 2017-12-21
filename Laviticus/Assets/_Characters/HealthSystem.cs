@@ -22,7 +22,7 @@ namespace RPG.Character
 
         AudioSource audioPlayer;
         Animator animator;
-        CharacterMovement characterMovement;
+        Character characterMovement;
 
 
         public float HealthAsPercentage
@@ -38,7 +38,7 @@ namespace RPG.Character
             currentHealthPoints = maxHealthPoints;
             animator = GetComponent<Animator>();
             audioPlayer = GetComponent<AudioSource>();
-            characterMovement = GetComponent<CharacterMovement>();
+            characterMovement = GetComponent<Character>();
         }
 
         // Update is called once per frame
