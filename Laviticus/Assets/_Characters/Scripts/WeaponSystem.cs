@@ -75,7 +75,7 @@ namespace RPG.Character
            // AttackTarget(target);
             //todo use repeat attack coroutine
         }
-        private void AttackTarget(Enemy target)
+        private void AttackTarget(EnemyAI target)
         {
             if (Time.time - lastHitTime > currentWeaponConfig.GetMinTimeBetweenHits())
             {

@@ -1829,15 +1829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40b5a439b52c19744b1248f21201339f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damagePerShot: 1
-  attackRadius: 4
-  firingPeriodSeconds: 0.5
-  firingPeriodVariation: 0.1
-  moveToAttackRadius: 6
-  projectileToUse: {fileID: 0}
-  projectileSocket: {fileID: 0}
-  animOverrideController: {fileID: 0}
-  verticalAimOffset: {x: 0, y: 1, z: 0}
+  chaseRadius: 6
 --- !u!114 &114268362176949604
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2354,7 +2346,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e2dfd0aad659bd46b9b1285482293e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentWeaponConfig: {fileID: 0}
+  currentWeaponConfig: {fileID: 11400000, guid: f750581e034b7d84fb8a7a6784adbaf3,
+    type: 2}
   baseDamage: 10
   criticalHitChance: 0.1
   criticalHitMultiplier: 1.25
@@ -2417,7 +2410,7 @@ MonoBehaviour:
   animOverride: {fileID: 22100000, guid: 2ec542ce84365c8478a29f2745f113cf, type: 2}
   characterAvatar: {fileID: 9000000, guid: d288a0e4a2d923b46898986e979da643, type: 3}
   stoppingDistance: 1
-  movementSpeedMultiplier: 0.7
+  movementSpeedMultiplier: 0.6
   moveThreshold: 1
   movingTurnSpeed: 360
   stationaryTurnSpeed: 180

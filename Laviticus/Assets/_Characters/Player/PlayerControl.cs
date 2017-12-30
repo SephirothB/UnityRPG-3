@@ -10,7 +10,7 @@ namespace RPG.Character
         [SerializeField] AnimatorOverrideController animOverrideController;
         
         Character character;
-        Enemy currentTarget;
+        EnemyAI currentTarget;
         SpecialAbilities abilities;
         CameraRaycaster cameraRaycaster;
         WeaponSystem weaponSystem;
@@ -46,7 +46,7 @@ namespace RPG.Character
             }
         }
 
-        void OnMouseOverEnemy(Enemy enemy)
+        void OnMouseOverEnemy(EnemyAI enemy)
         {
             currentTarget = enemy;
             if (Input.GetMouseButtonDown(0) && IsEnemyInRange(enemy))
@@ -71,7 +71,7 @@ namespace RPG.Character
             }
         }
 
-        private bool IsEnemyInRange(Enemy target)
+        private bool IsEnemyInRange(EnemyAI target)
         {
             float distanceToTarget = (target.transform.position - transform.position).magnitude;
             return distanceToTarget <= weaponSystem.GetCurrentWeapon().GetMaxAttackRange();
