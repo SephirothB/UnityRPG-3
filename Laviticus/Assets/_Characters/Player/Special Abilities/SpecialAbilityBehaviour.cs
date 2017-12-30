@@ -26,12 +26,8 @@ namespace RPG.Character
                 config.GetParticlePrefab().transform.rotation);
 
             newParticlePrefab.transform.parent = transform;
-
             newParticlePrefab.GetComponent<ParticleSystem>().Play();
-
             StartCoroutine(DestroyParticleWhenFinished(newParticlePrefab));
-
-
         }
 
         IEnumerator DestroyParticleWhenFinished(GameObject newParticlePrefab)

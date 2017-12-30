@@ -8,13 +8,8 @@ namespace RPG.Character
 {
     public class TeslaAttackBehaviour : SpecialAbilityBehaviour
     {
-        //TeslaAttackConfig config;
-
 
         int layerMask = 1 << 8;
-
-
-
 
         public override void Engage(GameObject target)
         {
@@ -23,8 +18,6 @@ namespace RPG.Character
             PlayParticleEffect();
 
         }
-
-
 
         private void DealSpecialAttack(GameObject target)
         {
@@ -35,10 +28,9 @@ namespace RPG.Character
                 (config as TeslaAttackConfig).GetRadius()
                 );
 
-
             foreach (RaycastHit hit in hits)
             {
-                bool hitPlayer = hit.collider.gameObject.GetComponent<Player>();
+                bool hitPlayer = hit.collider.gameObject.GetComponent<PlayerControl>();
                 if (target != null && !hitPlayer)
                 {
                     float damagetoDeal = (config as TeslaAttackConfig).GetDamageMulti();

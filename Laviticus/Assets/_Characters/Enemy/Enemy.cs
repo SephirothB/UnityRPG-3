@@ -1,13 +1,9 @@
-﻿using System.Collections;
-using UnityEngine;
-using RPG.Core;
+﻿using UnityEngine;
 
 namespace RPG.Character
 {
     public class Enemy : MonoBehaviour
     {
-
-
         [SerializeField] float damagePerShot = 1f;
         [SerializeField] float attackRadius = 4f;
         [SerializeField] float firingPeriodSeconds = 0.5f;
@@ -18,60 +14,48 @@ namespace RPG.Character
         [SerializeField] AnimatorOverrideController animOverrideController;
         [SerializeField] Vector3 verticalAimOffset = new Vector3(0, 1f, 0);
 
+        const string ATACK_ANIM = "Attack";
+
+        bool isAttacking = false;
+
         AudioSource audioPlayer;
         Animator animator;
-        Player player = null;
+        PlayerControl player = null;
         GameObject fireFrom;
 
-        const string ATACK_ANIM = "Attack";
-        
-        bool isAttacking = false;
-      
-
-        public void TakeDamage(float damage)
-        {
-
-        }
         void Start()
         {
-            player = FindObjectOfType<Player>();
+            player = FindObjectOfType<PlayerControl>();
 
             audioPlayer = GetComponent<AudioSource>();
         }
 
         void Update()
         {
-
             float distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);
             if (distanceToPlayer <= moveToAttackRadius)
             {
-               // aiCharacterControl.SetTarget(player.transform);
+                // aiCharacterControl.SetTarget(player.transform);
             }
             else
             {
-               // aiCharacterControl.SetTarget(transform);
+                // aiCharacterControl.SetTarget(transform);
             }
             if (distanceToPlayer <= attackRadius && !isAttacking)
             {
                 isAttacking = true;
                 float randomisedDelay = Random.Range(firingPeriodSeconds - firingPeriodVariation, firingPeriodSeconds + firingPeriodVariation);
                 InvokeRepeating("FireProjectile", 0f, randomisedDelay); //TODO switch to coroutines
-
-               
             }
             if (distanceToPlayer > attackRadius)
             {
                 isAttacking = false;
                 CancelInvoke();
             }
-
-
         }
 
         void FireProjectile()
         {
-
-
             GameObject newProjectile = Instantiate(projectileToUse, projectileSocket.transform.position, Quaternion.identity);
             Projectile projectileComponent = newProjectile.GetComponent<Projectile>();
             projectileComponent.SetDamage(damagePerShot);
@@ -84,6 +68,5 @@ namespace RPG.Character
             //Destroy(newProjectile, 0.8f);
 
         }
-
     }
 }

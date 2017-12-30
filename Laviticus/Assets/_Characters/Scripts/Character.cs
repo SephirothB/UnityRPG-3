@@ -1,40 +1,41 @@
-using System;
 using UnityEngine;
 using UnityEngine.AI;
 
-//TODO Consider rewiring
-using RPG.CameraUI;
 namespace RPG.Character
 {
     [SelectionBase]
-   
     public class Character : MonoBehaviour
     {
         [Header("Rigid Body Settings")]
-        [SerializeField] float rbMass;
+        [SerializeField]
+        float rbMass;
         [SerializeField] float rbDrag;
         [SerializeField] float rbAngularDrag;
         [SerializeField] bool useGravity;
 
         [Header("Capsule Collider Settings")]
-        [SerializeField] Vector3 capsuleCenter = new Vector3(0, 0.86f, 0);
+        [SerializeField]
+        Vector3 capsuleCenter = new Vector3(0, 0.86f, 0);
         [SerializeField] float capsuleRadius;
         [SerializeField] float capsuleHeight;
 
         [Header("Animator Settings")]
-        [SerializeField] RuntimeAnimatorController animController;
+        [SerializeField]
+        RuntimeAnimatorController animController;
         [SerializeField] AnimatorOverrideController animOverride;
         [SerializeField] Avatar characterAvatar;
 
         [Header("Movement Properties")]
-        [SerializeField] float stoppingDistance = 1f;
+        [SerializeField]
+        float stoppingDistance = 1f;
         [SerializeField] float movementSpeedMultiplier = 0.7f;
         [SerializeField] float moveThreshold = 1f;
         [SerializeField] float movingTurnSpeed = 360;
         [SerializeField] float stationaryTurnSpeed = 180;
 
         [Header("NavMesh Settings")]
-        [SerializeField] float nmSpeed = 3.5f;
+        [SerializeField]
+        float nmSpeed = 3.5f;
         [SerializeField] float nmAngularSpeed = 120f;
         [SerializeField] float nmAcceleration = 8f;
         [SerializeField] float nmStoppingDistance = 1.3f;
@@ -43,7 +44,6 @@ namespace RPG.Character
         [Header("Audio Source")]
         [SerializeField]
         float audioSourceSpatialBlend = 0.5f;
-
 
         Rigidbody myRigidbody;
         NavMeshAgent navAgent;
@@ -65,7 +65,7 @@ namespace RPG.Character
             myRigidbody.drag = rbDrag;
             myRigidbody.angularDrag = rbAngularDrag;
             myRigidbody.constraints = RigidbodyConstraints.FreezeRotation;
-            
+
             var capsuleCollider = gameObject.AddComponent<CapsuleCollider>();
             capsuleCollider.center = capsuleCenter;
             capsuleCollider.radius = capsuleRadius;
@@ -74,6 +74,7 @@ namespace RPG.Character
             characterAnimator = gameObject.AddComponent<Animator>();
             characterAnimator.runtimeAnimatorController = animController;
             characterAnimator.avatar = characterAvatar;
+            characterAnimator.applyRootMotion = true;
 
             navAgent = gameObject.AddComponent<NavMeshAgent>();
             navAgent.speed = nmSpeed;
@@ -88,13 +89,10 @@ namespace RPG.Character
             audioSource.spatialBlend = audioSourceSpatialBlend;
         }
 
-        void Start()
+        public AnimatorOverrideController GetAnimatorOverride()
         {
-       
-            characterAnimator.applyRootMotion = true;
-
+            return animOverride;
         }
-
         private void Update()
         {
             if (navAgent.remainingDistance > navAgent.stoppingDistance && isAlive)
@@ -107,12 +105,8 @@ namespace RPG.Character
             }
         }
 
-
-
         void OnAnimatorMove()
         {
-            // we implement this function to override the default root motion.
-            // this allows us to modify the positional speed before it's applied.
             if (Time.deltaTime > 0)
             {
                 Vector3 velocity = (characterAnimator.deltaPosition * movementSpeedMultiplier) / Time.deltaTime;
@@ -127,13 +121,11 @@ namespace RPG.Character
         {
             navAgent.destination = worldPos;
         }
+
         void Move(Vector3 movement)
         {
-
             SetForwardAndTurn(movement);
-
             ApplyExtraTurnRotation();
-
             UpdateAnimator();
         }
 
@@ -150,7 +142,6 @@ namespace RPG.Character
             }
 
             var localMovement = transform.InverseTransformDirection(movement);
-
             turnAmount = Mathf.Atan2(localMovement.x, localMovement.z);
             forwardAmount = localMovement.z;
         }
@@ -160,11 +151,7 @@ namespace RPG.Character
             // update the animator parameters
             characterAnimator.SetFloat("Forward", forwardAmount, 0.1f, Time.deltaTime);
             characterAnimator.SetFloat("Turn", turnAmount, 0.1f, Time.deltaTime);
-            //characterAnimator.speed = movementSpeedMultiplier;
-
         }
-
-
 
         void ApplyExtraTurnRotation()
         {

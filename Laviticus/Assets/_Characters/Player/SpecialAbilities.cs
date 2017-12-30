@@ -1,11 +1,8 @@
-﻿
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
-
 
 namespace RPG.Character
 {
-
     public class SpecialAbilities : MonoBehaviour
     {
         [SerializeField] SpecialAbilityConfig[] abilities;
@@ -28,7 +25,6 @@ namespace RPG.Character
 
         public void ConsumeEnergy(float amount)
         {
-
             float newEnergyPoints = currentEnergyPoints - amount;
             currentEnergyPoints = Mathf.Clamp(newEnergyPoints, 0, maxEnergyPoints);
             UpdateEnergyBar();
@@ -42,10 +38,9 @@ namespace RPG.Character
         void RegenEnergy()
         {
             var energyRegen = energyRegenPerSecond * Time.deltaTime;
-
             currentEnergyPoints = Mathf.Clamp(currentEnergyPoints + energyRegen, 0, maxEnergyPoints);
         }
-        // Use this for initialization
+
         void Start()
         {
             audioSource = GetComponent<AudioSource>();
@@ -55,7 +50,6 @@ namespace RPG.Character
 
         }
 
-        // Update is called once per frame
         void Update()
         {
             if (currentEnergyPoints < maxEnergyPoints)
@@ -75,23 +69,18 @@ namespace RPG.Character
             {
                 abilities[abilityIndex].AttachAbility(gameObject);
             }
-
         }
         public void AttemptSpecialAbility(int abilityIndex, GameObject target = null)
         {
-
-
             var energyCost = abilities[abilityIndex].GetEnergyCost();
             if (energyCost <= currentEnergyPoints)
             {
                 ConsumeEnergy(energyCost);
                 abilities[abilityIndex].Engage(target);
-
             }
             else
             {
                 audioSource.PlayOneShot(outOfEnergy);
-
             }
         }
     }

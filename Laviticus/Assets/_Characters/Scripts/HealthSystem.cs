@@ -86,7 +86,7 @@ namespace RPG.Character
 
             animator.SetTrigger(DEATH_ANIM);
 
-            var playerComponent = GetComponent<Player>();
+            var playerComponent = GetComponent<PlayerControl>();
             if (playerComponent && playerComponent.isActiveAndEnabled) //research lazy evaluation
             {
                 audioPlayer.clip = deathSounds[UnityEngine.Random.Range(0, deathSounds.Length)];

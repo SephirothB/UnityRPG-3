@@ -19,7 +19,7 @@ namespace RPG.CameraUI
         Rect screenRectOnContruction = new Rect(0, 0, Screen.width, Screen.height);
 
         public delegate void OnMouseOverTerrain(Vector3 destination);
-        public event OnMouseOverTerrain SendDestinationVector;
+        public event OnMouseOverTerrain onMouseOverTerrain;
 
         public delegate void OnMouseOverEnemy(Enemy enemy);
         public event OnMouseOverEnemy onMouseOverEnemy;
@@ -73,14 +73,14 @@ namespace RPG.CameraUI
             if (walkableHit)
             {
                 Cursor.SetCursor(walkCursor, cursorHotspot, CursorMode.Auto);
-                SendDestinationVector(hitInfo.point);
+                onMouseOverTerrain(hitInfo.point);
                 return true;
             }
             return false;
         }
 
-       
 
-        
+
+
     }
 }

@@ -6,7 +6,7 @@ namespace RPG.Character
 {
     public class NanoHealBehavior : SpecialAbilityBehaviour
     {
-        Player player;
+        PlayerControl player;
 
 
 
@@ -24,7 +24,7 @@ namespace RPG.Character
 
         void Start()
         {
-            player = GetComponent<Player>();
+            player = GetComponent<PlayerControl>();
 
         }
 
