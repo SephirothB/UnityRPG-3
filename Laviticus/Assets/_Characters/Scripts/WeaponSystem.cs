@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.Assertions;
+using System.Collections;
 
 namespace RPG.Character
 {
@@ -15,6 +16,7 @@ namespace RPG.Character
         const string DEFAULT_ATTACK = "Default attack";
 
         float lastHitTime;
+        //float timeToWait = 0.2f;
 
         GameObject target;
         GameObject weaponObject;
@@ -72,17 +74,59 @@ namespace RPG.Character
         public void AttackTarget(GameObject targetToAttack)
         {
             target = targetToAttack;
-           // AttackTarget(target);
+            StartCoroutine(AttackRepeatedly());
+            // AttackTarget(target);
             //todo use repeat attack coroutine
         }
-        private void AttackTarget(EnemyAI target)
+
+        IEnumerator AttackRepeatedly()
+        {
+            bool attackerStillAlive = GetComponent<HealthSystem>().HealthAsPercentage >= Mathf.Epsilon;
+            bool targetStillAlive = target.GetComponent<HealthSystem>().HealthAsPercentage >= Mathf.Epsilon;
+
+            while (attackerStillAlive && targetStillAlive)
+            {
+                float weaponHitPeriod = currentWeaponConfig.GetMinTimeBetweenHits();
+                float timeToWait = weaponHitPeriod * character.GetAnimSpeedOverride();
+
+                bool isTimeToHitAgain = Time.time - lastHitTime > timeToWait;
+
+                if (isTimeToHitAgain)
+                {
+                    AttackTargetOnce();
+                    lastHitTime = Time.time;
+                }
+                yield return new WaitForSeconds(timeToWait);
+            }
+        }
+
+        void AttackTargetOnce()
+        {
+            transform.LookAt(target.transform);
+            SetAttackAnimation();
+            animator.SetTrigger(ATTACK_ANIM);
+            float damageDelay = 1.0f; //todo get from weapon
+            StartCoroutine(DamageAfterDelay(damageDelay));
+        }
+
+        IEnumerator DamageAfterDelay(float damageDelay)
+        {
+            yield return new WaitForSecondsRealtime(damageDelay);
+            target.GetComponent<HealthSystem>().TakeDamage(CalculateDamage());
+
+        }
+
+        private void AttackTarget(EnemyAI targetToAttack)
         {
             if (Time.time - lastHitTime > currentWeaponConfig.GetMinTimeBetweenHits())
             {
                 SetAttackAnimation();
                 animator.SetTrigger(ATTACK_ANIM);
                 lastHitTime = Time.time;
-            }
+                targetToAttack.GetComponent<HealthSystem>().TakeDamage(currentWeaponConfig.GetAdditionalDamage());
+
+                //know how often to attack
+            }   //if time to hit again
         }
 
         private float CalculateDamage()

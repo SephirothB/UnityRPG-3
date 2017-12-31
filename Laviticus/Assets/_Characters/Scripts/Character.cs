@@ -24,6 +24,7 @@ namespace RPG.Character
         RuntimeAnimatorController animController;
         [SerializeField] AnimatorOverrideController animOverride;
         [SerializeField] Avatar characterAvatar;
+        [SerializeField] float animSpeedOverride = 1.5f;
 
         [Header("Movement Properties")]
         [SerializeField]
@@ -75,6 +76,7 @@ namespace RPG.Character
             characterAnimator.runtimeAnimatorController = animController;
             characterAnimator.avatar = characterAvatar;
             characterAnimator.applyRootMotion = true;
+            characterAnimator.speed = animSpeedOverride;
 
             navAgent = gameObject.AddComponent<NavMeshAgent>();
             navAgent.speed = nmSpeed;
@@ -92,6 +94,11 @@ namespace RPG.Character
         public AnimatorOverrideController GetAnimatorOverride()
         {
             return animOverride;
+        }
+
+        public float GetAnimSpeedOverride()
+        {
+            return characterAnimator.speed;
         }
         private void Update()
         {
@@ -151,6 +158,7 @@ namespace RPG.Character
             // update the animator parameters
             characterAnimator.SetFloat("Forward", forwardAmount, 0.1f, Time.deltaTime);
             characterAnimator.SetFloat("Turn", turnAmount, 0.1f, Time.deltaTime);
+            characterAnimator.speed = animSpeedOverride;
         }
 
         void ApplyExtraTurnRotation()
