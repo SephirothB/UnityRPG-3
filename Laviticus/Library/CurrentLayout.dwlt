@@ -43,7 +43,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 950, y: 421}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 371}
   m_MaxSize: {x: 10002, y: 14021}
   vertical: 1
-  controlID: 124
+  controlID: 74
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -523,7 +523,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.13998136, y: -0.17901008, z: 0.025740912, w: 0.97349787}
     speed: 2
-    m_Value: {x: 0.13998136, y: -0.17901008, z: 0.025740912, w: 0.97349787}
+    m_Value: {x: -0.13998136, y: 0.17901008, z: -0.02574091, w: -0.97349787}
   m_Size:
     m_Target: 3.5847197
     speed: 2
@@ -578,19 +578,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/_Characters/Scripts
+    - Assets/Audio/Action SFX Vocals
   m_ViewMode: 1
   m_StartGridSize: 81
   m_LastFolders:
-  - Assets/_Characters/Scripts
+  - Assets/Audio/Action SFX Vocals
   m_LastFoldersGridSize: 81
   m_LastProjectPath: D:\Development\Unity\UnityRPG\Laviticus
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 60.69506}
-    m_SelectedIDs: 36530000
-    m_LastClickedID: 21302
-    m_ExpandedIDs: 000000005e2a0000d22a000024350000c63a000072410000f44400008246000006610000086100000a6100000c6100000e61000010610000126100001461000016610000186100001a6100001c6100001e61000020610000226100002461000026610000286100002a61000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 352}
+    m_SelectedIDs: ba480000
+    m_LastClickedID: 18618
+    m_ExpandedIDs: 00000000602a0000d42a000026350000c83a000074410000f644000084460000c25200003c6100003e61000040610000426100004461000046610000486100004a6100004c6100004e61000050610000526100005461000056610000586100005a6100005c6100005e6100006061000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -618,7 +618,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000005e2a0000d22a000024350000c63a000072410000f44400008246000006610000086100000a6100000c6100000e61000010610000126100001461000016610000186100001a6100001c6100001e61000020610000226100002461000026610000286100002a610000
+    m_ExpandedIDs: 00000000602a0000d42a000026350000c83a000074410000f6440000844600003c6100003e61000040610000426100004461000046610000486100004a6100004c6100004e61000050610000526100005461000056610000586100005a6100005c6100005e61000060610000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -670,7 +670,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 99}
     m_GridSize: 81
   m_DirectoriesAreaWidth: 186
 --- !u!114 &18
@@ -729,9 +729,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: d4f5ffff
-    m_LastClickedID: -2604
-    m_ExpandedIDs: 786cfbffa87afbffd6f5ffff98fbffff00000000ce5800000e59000050590000
+    m_SelectedIDs: 324c0000a6350000083b0000e4490000
+    m_LastClickedID: 0
+    m_ExpandedIDs: 74f3ffff98fbffff0000000072570000e85800008a590000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
